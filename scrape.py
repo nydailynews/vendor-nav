@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 # Download current versions of denverpost.com's header and footer.
+import httplib2
+
+def parse_page():
+    """ Given a search string, return the content that matches that search.
+        """
+    pass
 
 def main(args):
     """ Example usage:
@@ -16,7 +22,7 @@ def build_parser(args):
         True
         """
     parser = argparse.ArgumentParser(usage='$ python scrape.py',
-                                     description='Download and parse site header & footer.',
+                                     description='Parse site header & footer.',
                                      epilog='Examply use: python scrape.py')
     parser.add_argument("-v", "--verbose", dest="verbose", default=False, action="store_true")
     args = parser.parse_args(args)
