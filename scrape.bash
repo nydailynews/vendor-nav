@@ -13,7 +13,7 @@ TEST=0
 SLUG='denverpost'
 FILESIZE=0
 
-# What arguments do we pass?
+# Handle args
 while [ "$1" != "" ]; do
     case $1 in
         -u | --url ) shift
@@ -26,7 +26,6 @@ while [ "$1" != "" ]; do
     shift
 done
 
-# DOWNLOAD!
 # If we're not testing, we download the file
 if [ "$TEST" -eq 0 ]; then wget -q -O "$SLUG.new" $URL; fi
 
@@ -34,11 +33,10 @@ wget -O "$SLUG.new" "$URL"
 
 FILESIZE=$(du -b "$SLUG.new" | cut -f 1)
 if [ $FILESIZE -lt 1000 ]; then
-    echo "Filesize: $FILESIZE"
-    # The $SENDER and $RECIPIENTS are set via environment variables.
-    #python mailer.py --state --sender $SENDER $RECIPIENTS
+    echo "Filesize smaller than it sohuld be: $FILESIZE"
     exit 2
 fi
 
-echo "DONE"
+python scrape.py
+
 exit 1
