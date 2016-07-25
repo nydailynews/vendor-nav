@@ -12,7 +12,7 @@ class Parse:
         """ 
             """
         self.regexes = {
-            'header': '<nav class="pushnav">.*</nav></nav>',
+            'header': '<nav\ class="pushnav">.*</nav></nav>',
             'footer': '<footer>.*</footer>'
         }
         self.content = {
@@ -25,9 +25,8 @@ class Parse:
         """ Take a string and parse the desired key/value pairs. Requires a regex
             of named fields. Returns a dict of the named pairs.
             """
-        regex = re.compile(self.regex, re.MULTILINE|re.VERBOSE|re.IGNORECASE|re.DOTALL)
+        regex = re.compile(self.regexes[self.regex], re.MULTILINE|re.VERBOSE|re.IGNORECASE|re.DOTALL)
         self.parts = regex.findall(markup)
-        #print self.parts
         return self.parts
 
 def parse_page():
