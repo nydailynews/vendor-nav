@@ -110,8 +110,8 @@ def main(args):
     # Turn the nav markup into actionable javascript
     fh = open('html/template.js', 'rb')
     js = fh.read()
-    js = js.replace('{{header}}', parse.content['header'])
-    js = js.replace('{{footer}}', parse.content['footer'])
+    js = js.replace('{{header}}', parse.content['header'].replace("\n", "\\n").replace("'", "\\'"))
+    js = js.replace('{{footer}}', parse.content['footer'].replace("\n", "\\n").replace("'", "\\'"))
 
     # Write the file
     if parse.content['header'] != '':
