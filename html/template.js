@@ -2,5 +2,8 @@
 var vendor_include = {
     header: '{{header}}',
     footer: '{{footer}}',
-    init: function() {}  
+    init: function() {
+        // Make sure we 
+
+    }  
 };

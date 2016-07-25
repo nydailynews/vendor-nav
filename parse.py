@@ -6,6 +6,7 @@ import re
 from collections import OrderedDict
 import types
 import os.path
+import string
 import httplib2
 
 class Parse:
@@ -15,7 +16,7 @@ class Parse:
             """
         self.regexes = {
             'header': '<nav\ class="pushnav">.*</nav></nav>',
-            'footer': '<footer>.*</footer>'
+            'footer': '<footer\ class="site-footer">.*</footer>'
         }
         self.content = {
             'header': '',
@@ -60,7 +61,6 @@ class FileWrapper:
     def write(self, content):
         """ 
             """
-        import string
         fn = open(self.filename, 'w')
         try:
             # Only run this on non-unicode strings
@@ -68,7 +68,6 @@ class FileWrapper:
                 content = content.decode('utf-8', 'replace')
         except (UnicodeError), e:
             # Figure out what the position of the error is
-            import re
             regex = re.compile('.* position ([0-9]*):')
             r = regex.search(e.__str__())
             if len(r.groups()) > 0:
@@ -100,21 +99,30 @@ def main(args):
         """
     fh = open('denverpost.new', 'rb')
     markup = fh.read()
-    parse = Parse()
 
+    # Results of this parsing is stored in parse.content
+    parse = Parse()
     parse.regex = 'header'
     parse.extract_parts(markup)
     parse.regex = 'footer'
     parse.extract_parts(markup)
 
-    content = parse.content
-
     # Turn the nav markup into actionable javascript
-    t = open('html/template.js')
+    fh = open('html/template.js', 'rb')
+    js = fh.read()
+    js = js.replace('{{header}}', parse.content['header'])
+    js = js.replace('{{footer}}', parse.content['footer'])
 
     # Write the file
-    if parse.parts[0] != '':
-        f = FileWrapper('vendor-include.js')
+    if parse.content['header'] != '':
+        f = FileWrapper('output/header.html')
+        f.write(parse.content['header'])
+    if parse.content['footer'] != '':
+        f = FileWrapper('output/footer.html')
+        f.write(parse.content['footer'])
+    if parse.content['footer'] != '' and parse.content['header'] != '':
+        f = FileWrapper('output/vendor-include.js')
+        f.write(js)
         
 
 def build_parser(args):
