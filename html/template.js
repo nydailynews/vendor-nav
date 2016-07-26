@@ -20,6 +20,8 @@ var dfmNav = {
         }
 
     },
+    add_js_if_necessary: function(search_var, href) {
+    },
     initParams: function(params) {
         //  Make sure we have the CSS we need on the page.
         var search_string = 'prod/static/css/denverpost';

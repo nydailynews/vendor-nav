@@ -15,7 +15,7 @@ class Parse:
         """ 
             """
         self.regexes = {
-            'header': '<nav\ class="pushnav">.*</nav></nav>',
+            'header': '<nav\ class="pushnav">.*</header>.*<div\ id="content"\ class="site-content">',
             'footer': '<footer\ class="site-footer">.*</footer>'
         }
         self.content = {
