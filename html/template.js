@@ -20,7 +20,10 @@ var dfmNav = {
         }
 
     },
-    add_js_if_necessary: function(search_var, href) {
+    add_js: function(src) {
+        var s = document.createElement('script');
+        s.setAttribute('src', src);
+        document.getElementsByTagName('head')[0].appendChild(s);
     },
     initParams: function(params) {
         //  Make sure we have the CSS we need on the page.
@@ -28,7 +31,21 @@ var dfmNav = {
         var css_href = 'https://assets.digitalfirstmedia.com/prod/static/css/denverpost.css?ver=1.0';
         this.add_css_if_necessary(search_string, css_href);
 
-        // * Put the header together
+        // Make sure we have jquery on the page.
+        if ( typeof jQuery === 'undefined' )
+        {
+            console.log('Adding jQuery');
+            this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+        }
+
+        // Put the header on the page.
+        if (  $('#dfmHeader').length )
+        {
+            console.log('hi');
+            $('#dfmHeader').html(this.header + '</div>');
+        }
+        console.log('finished');
+        
         // * Add the header to the page, then the footer.
     }  
 };
