@@ -113,13 +113,20 @@ def main(args):
     js = js.replace('{{header}}', parse.content['header'].replace("\n", "\\n").replace("'", "\\'"))
     js = js.replace('{{footer}}', parse.content['footer'].replace("\n", "\\n").replace("'", "\\'"))
 
+    fh = open('html/head.html', 'rb')
+    head_markup = fh.read()
+
     # Write the file
     if parse.content['header'] != '':
         f = FileWrapper('output/header.html')
         f.write(parse.content['header'])
+        f = FileWrapper('output/header-iframeable.html')
+        f.write('%s%s' % (head_markup, parse.content['header']))
     if parse.content['footer'] != '':
         f = FileWrapper('output/footer.html')
         f.write(parse.content['footer'])
+        f = FileWrapper('output/footer-iframeable.html')
+        f.write('%s%s' % (head_markup, parse.content['footer']))
     if parse.content['footer'] != '' and parse.content['header'] != '':
         f = FileWrapper('output/vendor-include.js')
         f.write(js)
