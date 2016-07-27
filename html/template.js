@@ -8,7 +8,10 @@ var dfmNav = {
         var has_css = 0;
         for ( i = 0; i < len; i++ )
         {
-            if ( document.styleSheets[i].href.indexOf(search_string) > 0 ) has_css = 1;
+            if ( document.styleSheets[i].href !== null )
+            {
+                if ( document.styleSheets[i].href.indexOf(search_string) > 0 ) has_css = 1;
+            }
         }
         if ( has_css == 0 )
         {
