@@ -25,6 +25,20 @@ var dfmNav = {
         s.setAttribute('src', src);
         document.getElementsByTagName('head')[0].appendChild(s);
     },
+    add_header: function() {
+        // Put the header on the page.
+        if (  jQuery('#dfmHeader').length )
+        {
+            jQuery('#dfmHeader').html(this.header + '</div>');
+        }
+    },
+    add_footer: function() {
+        // Put the footer on the page.
+        if (  jQuery('#dfmFooter').length )
+        {
+            jQuery('#dfmFooter').html(this.footer);
+        }
+    },
     initParams: function(params) {
         //  Make sure we have the CSS we need on the page.
         var search_string = 'prod/static/css/denverpost';
@@ -32,20 +46,20 @@ var dfmNav = {
         this.add_css_if_necessary(search_string, css_href);
 
         // Make sure we have jquery on the page.
+        // Then add the header to the page, then the footer.
         if ( typeof jQuery === 'undefined' )
         {
             console.log('Adding jQuery');
             this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+            var timeoutID = window.setTimeout('dfmNav.add_header(); dfmNav.add_footer();', 2000);
+        }
+        else
+        {
+            this.add_header();
+            this.add_footer();
         }
 
-        // Put the header on the page.
-        if (  $('#dfmHeader').length )
-        {
-            console.log('hi');
-            $('#dfmHeader').html(this.header + '</div>');
-        }
         console.log('finished');
-        
-        // * Add the header to the page, then the footer.
     }  
 };
+dfmNav.initParams();
