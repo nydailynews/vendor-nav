@@ -63,7 +63,7 @@ var dfmNav = {
         {
             console.log('Adding jQuery');
             this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-            var timeoutID = window.setTimeout('dfmNav.add_header(); dfmNav.add_footer(); dfmNav.css_checks();', 2000);
+            var timeoutID = window.setTimeout('dfmNav.css_checks(); dfmNav.add_header(); dfmNav.add_footer();', 2000);
         }
         else
         {

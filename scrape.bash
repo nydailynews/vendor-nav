@@ -37,6 +37,6 @@ if [ $FILESIZE -lt 1000 ]; then
     exit 2
 fi
 
-python scrape.py
+python parse.py 
 
 exit 1
