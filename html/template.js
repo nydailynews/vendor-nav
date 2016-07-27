@@ -31,8 +31,8 @@ var dfmNav = {
     add_header: function() {
         // Put the header on the page.
 
-        this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
-        this.add_js('http://www.denverpost.com/wp-content/themes/wp-mason/static/js/global.min.js');
+        //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
+        //this.add_js('http://www.denverpost.com/wp-content/themes/wp-mason/static/js/global.min.js');
 
         if (  jQuery('#dfmHeader').length )
         {
@@ -76,7 +76,7 @@ var dfmNav = {
             this.add_header();
             this.add_footer();
         }
-        var to = window.setTimeout("dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0');", 5000);
+        //var to = window.setTimeout("dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0');", 4000);
     }  
 };
 dfmNav.initParams();
