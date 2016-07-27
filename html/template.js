@@ -42,27 +42,29 @@ var dfmNav = {
             jQuery('#dfmFooter').html(this.footer);
         }
     },
-    initParams: function(params) {
-        //  Make sure we have the CSS we need on the page.
+    css_checks: function() {
+        // Make sure the page is as ready as possible for the new styles.
         var search_string = 'prod/static/css/denverpost';
         var css_href = 'https://assets.digitalfirstmedia.com/prod/static/css/denverpost.css?ver=1.0';
         this.add_css_if_necessary(search_string, css_href);
 
+        //jQuery('body').addClass('body-copy');
+    },
+    initParams: function(params) {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
         if ( typeof jQuery === 'undefined' )
         {
             console.log('Adding jQuery');
             this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-            var timeoutID = window.setTimeout('dfmNav.add_header(); dfmNav.add_footer();', 2000);
+            var timeoutID = window.setTimeout('dfmNav.add_header(); dfmNav.add_footer(); dfmNav.css_checks();', 2000);
         }
         else
         {
+            this.css_checks();
             this.add_header();
             this.add_footer();
         }
-
-        console.log('finished');
     }  
 };
 dfmNav.initParams();
