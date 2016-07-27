@@ -30,6 +30,10 @@ var dfmNav = {
     },
     add_header: function() {
         // Put the header on the page.
+
+        this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
+        this.add_js('http://www.denverpost.com/wp-content/themes/wp-mason/static/js/global.min.js');
+
         if (  jQuery('#dfmHeader').length )
         {
             jQuery('#dfmHeader').html(this.header + '</div>');
@@ -59,11 +63,12 @@ var dfmNav = {
     initParams: function(params) {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
+
         if ( typeof jQuery === 'undefined' )
         {
             console.log('Adding jQuery');
             this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-            var timeoutID = window.setTimeout('dfmNav.css_checks(); dfmNav.add_header(); dfmNav.add_footer();', 2000);
+            var to = window.setTimeout('dfmNav.css_checks(); dfmNav.add_header(); dfmNav.add_footer();', 2000);
         }
         else
         {
@@ -71,6 +76,7 @@ var dfmNav = {
             this.add_header();
             this.add_footer();
         }
+        var to = window.setTimeout("dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0');", 5000);
     }  
 };
 dfmNav.initParams();
