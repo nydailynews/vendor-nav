@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="http://crime.denverpost.com" />
+    <meta name="distribution" content="global" />
+    <meta name="robots" content="index" />
+
+    <meta name="language" content="en, sv" />
+    <meta name="Copyright" content="Copyright &copy; The Denver Post." />
+    <link rel="author" href="humans.txt" />
+
+    <meta name="description" content="Denver, Colorado Crime Map and Crime Statistics from The Denver Post">
+    <meta name="keywords" content="denver crime map, denver crime statistics, denver crime data, crime denver colorado, denver crime search, denver police reports, denver co crime, denver crime rates" />
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:image" value="http://crime.denverpost.com/lib/img/20131108_075329_denver-crime-map.jpg" />
+    <meta name="twitter:url" value="http://crime.denverpost.com" />
+    <meta name="twitter:title" value="Denver, Colorado Crime Map and Crime Statistics from The Denver Post" />
+    <meta name="twitter:description" value="Denver crime map showing crime rates and statistics in Denver including Capitol Hill, LoDo, Five Points, Washington Park, Stapleton neighborhoods from the Denver Police Department." />
+    <meta name="twitter:image" value="http://crime.denverpost.com/lib/img/20131108_075329_denver-crime-map.jpg" />
+    <meta name="twitter:site" value="@denvercrime" />
+    <meta name="twitter:domain" value="denverpost.com" />
+    <meta name="twitter:creator" content="@denvercrime">
+    <meta name="twitter:app:name:iphone" value="Denver Post">
+    <meta name="twitter:app:name:ipad" value="Denver Post">
+    <meta name="twitter:app:name:googleplay" value="The Denver Post">
+    <meta name="twitter:app:id:iphone" value="id375264133">
+    <meta name="twitter:app:id:ipad" value="id409389010">
+    <meta name="twitter:app:id:googleplay" value="com.ap.denverpost" />
+
+    <meta property="fb:app_id" content="105517551922"/>
+    <meta property="og:title" content="Denver, Colorado Crime Map and Crime Statistics from The Denver Post" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://crime.denverpost.com/" />
+    <meta property="og:site_name" content="The Denver Post" />
+    <meta property="og:image" content="http://crime.denverpost.com/lib/img/20131108_075329_denver-crime-map.jpg" />
+    <meta property="og:description" content="Denver crime map showing crime rates and statistics in Denver including Capitol Hill, LoDo, Five Points, Washington Park, Stapleton neighborhoods from the Denver Police Department" />
+    <meta property="article:publisher" content="https://www.facebook.com/denverpost" />
+
+    
+    <title>Denver, Colorado Crime Map and Crime Statistics</title>
+    <link href="http://crime.denverpost.com/lib/css/crime-map.css" rel="stylesheet">
+    <link href="http://crime.denverpost.com/jquery-ui/css/custom-theme/jquery-ui-1.10.2.custom.min.css" rel="stylesheet">
+    <link href="http://crime.denverpost.com/lib/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="http://crime.denverpost.com/lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://crime.denverpost.com/lib/css/bootstrap-tour/bootstrap-tour.min.css" rel="stylesheet" />
+    <!--chartbeat -->
+    <script>var _sf_startpt=(new Date()).getTime()</script>
+    
+</head>
+<body>
+<!-- Google Tag Manager Data Layer -->
+  <script>
+    var is_mobile = function() {
+      var check = false;
+      (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+      if ( check == true ) return 'YES';
+      return 'NO';
+    };
+    analyticsEvent = function() {};
+    analyticsSocial = function() {};
+    analyticsVPV = function() {};
+    analyticsClearVPV = function() {};
+    analyticsForm = function() {};
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'ga_ua':'UA-61435456-7',
+        'quantcast':'p-4ctCQwtnNBNs2',
+        'quantcast label': 'Denver',
+        'comscore':'6035443',
+        'errorType':'',
+        'Publisher Domain':'denverpost.com',
+        'Publisher Product':'denverpost.com',
+        'Dateline':'',
+        'Publish Hour of Day':'',
+        'Create Hour of Day':'',
+        'Update Hour of Day':'',
+        'Behind Paywall':'NO',
+        'Mobile Presentation':'NO',
+        'kv':'crimemap',
+        'Release Version':'',
+        'Digital Publisher':'denverpost.com',
+        'Platform':'custom',
+        'Section':'news',
+        'Taxonomy1':'Crime & Courts',
+        'Taxonomy2':'Crime',
+        'Taxonomy3':'Crime Map',
+        'Taxonomy4':'',
+        'Taxonomy5':'',
+        'Content Source':'',
+        'Canonical URL': '',
+        'Slug':'',
+        'Content ID':'',
+        'Page Type':'section',
+        'Publisher State':'CO',
+        'Byline':'',
+        'Content Title':'',
+        'URL':'',
+        'Page Title':'',
+        'User ID':''
+    });
+  </script>
+  <!-- End Google Tag Manager Data Layer -->
+<!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TLFP4R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>
+(function(w,d,s,l,i) {
+   w[l]=w[l]||[];
+   w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+   var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+   j.async=true;
+   j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})
+(window,document,'script','dataLayer','GTM-TLFP4R');
+</script><!-- End Google Tag Manager -->
+
+    <div class="row-fluid">
+        <div class="ad-spot span12">
+        <!-- begin NavAd 9 - Photos/Media Link -->
+        <script type='text/javascript'>
+        (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+        </script>
+        <div id='div-gpt-ad-1364842121919-9'>
+        <script type='text/javascript'>
+        googletag.defineSlot('/8013/denverpost.com/News/Crime', [728,90], 'div-gpt-ad-1364842121919-9').setTargeting('kv','crimemap').setTargeting('pos',['top_leaderboard']).addService(googletag.pubads());
+        googletag.pubads().enableSyncRendering();
+        googletag.enableServices();
+        googletag.display('div-gpt-ad-1364842121919-9');
+        </script>
+        </div>
+
+            <!-- end NavAd 9 -->
+        </div>
+    </div>
+
+
+<div id="dfmHeader"><!--Header Goes Here--></div>        
+
+<div class="container">
+
+
+    
+    <header id="article-top">
+        <ul class="breadcrumb block small hide-for-phone">
+            <li><a href="http://www.denverpost.com/">Home</a><span class="divider"> →</span></li>
+            <li><a href="http://www.denverpost.com/news">Denver and the West</a><span class="divider"> →</span></li>
+            <li><a href="http://www.denverpost.com/crime">Crime</a><span class="divider"> →</span></li>
+            <li class="active">Interactive</li>
+        </ul>
+    </header>
+
+    <div id="header-con" class="row-fluid">
+        <div class="map-header span8"></div>
+    </div>
+    <div class="row-fluid round-con">
+        
+        <div id="date-form" class="span2">
+            <h4 style="line-height: 1em">Show crimes <br /><span style="font: 11px Arial">(up to 31 days)</span></h4>
+            <form>
+                <p><label class="date-form" for="from">From</label>
+                <input type="text" id="from" name="from" value="" /></p>
+                <p><label class="date-form" for="to">To</label>
+                <input type="text" id="to" name="to" value="" />
+                <button class="btn btn-mini" type="button" onclick="_gaq.push(['_trackEvent', 'Denver Crime Map', 'Search button', 'By date']); is_in_data(this.form.from.value,this.form.to.value);">Go</button></p>
+            </form>
+        </div>
+        <div id="chart-div" class="span7"></div>
+        <div id="total-crimes" class="span3">
+            <div style="border-bottom: 1px solid #CCC; margin-bottom: 15px">
+                <div id="total-crimes-number"></div>
+                <div id="total-crimes-desc">Total crimes from <span id="total-crimes-date-start"></span> to <span id="total-crimes-date-end"></span></div>
+                <div style="clear:both"></div>
+                <p><a href="#trends">See overall trends</a></p>
+            </div>
+            <button text="Reset to original map state" class="btn btn-mini" type="button" onclick="reset_map(default_start,default_end);">Reset map and data</button>
+            <button text="Take a tour of this apps features" class="btn btn-mini" type="button" onclick="make_tour(true);">How it works</button>
+        </div>
+        
+    </div>
+    <div class="row-fluid square-con" id="bottom-row">
+        <div id="dfm-map" class="span9">
+            <div style="position: absolute; z-index: 100"></div>
+        </div>
+        <div id="map-options" class="span3"></div>
+    </div>
+    <a name="trends"></a>
+    <div id="trendstitle">Overall Trends <span id="thisperiod"></span></div>
+    <div class="row-fluid" id="crime-stats-container"></div>
+
+    <div class="row-fluid">
+        <div class="credits-con span8">
+        Credits: Vaughn Hagerty, Nelson Hsu / DFM
+        </div>
+    <div>
+        <div class="disclaimer-con span12">
+            These data come from <a href="http://data.denvergov.org/dataset/city-and-county-of-denver-crime" target="_blank">Denver Police Department reports 
+            on crimes</a> and are updated a few times per week. They do not include every crime reported to police or incidents to which police respond
+            that do not result in a police report.
+            <a href="mailto:feedback@denverpost.com">Questions? Comments? Email the Denver Post.</a>
+
+        </div>
+    </div>
+
+    
+
+</div>
+        <div id="dfmFooter"><!--Footer Goes Here--></div>
+
+<!--handlebars template for address search-->
+<script id="address-search-template" type="text/x-handlebars-template">
+<form id="address-search" name="address_search">
+    <label for="addess_to_search">Find neighborhood by address</label> <input value="Enter an address" data-content="" data-placement="bottom"type="text" id="address_to_search" name="address_to_search" title="Address not found" onclick="this.value='';jQuery('#address_to_search').popover('hide')"/>
+    <button id="address-search-button" type="button" class="btn btn-mini" onclick="find_address(this.form.address_to_search.value); return false;">Search</button>
+</form>
+</script>
+
+<!--handlebars template for main map sidebar text-->
+<script id="main-map-sidebar-template" type="text/x-handlebars-template">
+<p><a href="#" onclick="google.maps.event.trigger(polygons['{{neighborhood}}'],'click')">{{formatted_neighborhood}}</a>
+    <br />Total crimes: {{total_crimes}}
+    <br />Per 1,000 population {{crimes_per_1000}}
+</p>
+</script>
+
+<!--handlebars template for neighborhood detail map sidebar text-->
+<script id="neighborhood-detail-map-sidebar-template" type="text/x-handlebars-template">
+        <p><input type="checkbox" {{checked}} onclick="display_markers(this.value)" value="{{crime_type}}" /> {{crime_type}} ({{crime_type_number}})</p>
+</script>
+
+<!--handlebars template for breadcrumbs-->
+<script id="breadcrumbs-template" type="text/x-handlebars-template">
+Crime in <a href="#" onclick="_gaq.push(['_trackEvent', '{{property_name}} Crime Map', 'Click link', 'Back to main page']);set_main_page(); return false;" title="Back to main crime page">{{property_name}}</a>
+ &raquo; {{formatted_neighborhood}}
+</script>
+
+<!--handlebars template to build crime stats-->
+
+<script id="crime-stats-template" type="text/x-handlebars-template">
+<div class="span3 ctable"> 
+  <h4>{{headline}}</h4>
+  {{#list stats}}<tr><td>{{label}}</td><td>{{stat}}</td></tr>{{/list}}
+</div>
+</script>
+
+<!--handlebars template to build main map legend-->
+
+<script id="map-legend-template" type="text/x-handlebars-template">
+    <p><b>Crime trends</b></p>
+    <p><div class="little-square" style="background-color:{{poly_red}}"></div><span>Crime up</span></p>
+    <p><div class="little-square" style="background-color:{{poly_gray}}"></div><span>About average</span></p>
+    <p><div class="little-square" style="background-color:{{poly_green}}"></div><span>Crime down</span></p>
+    <p class="legend-explain">Up or down means more than one standard deviation over or below the 12-month average, respectively.</p>
+</script>
+
+<!--handlebars template to build main map legend no trends-->
+
+<script id="map-legend-template-no-trends" type="text/x-handlebars-template">
+    <p><b>Crime trends</b></p>
+    <p>Crime trends only available for timespans of approximately one month</p>
+</script>
+
+
+<!--handlebars template to build neighborhood map legend-->
+
+<script id="neighborhood-legend-template" type="text/x-handlebars-template">
+    <p><b>Marker colors</b></p>
+    <p><div class="little-square" style="background-color:#da482c"></div><span>Violent crime</span></p>
+    <p><div class="little-square" style="background-color:#503158"></div><span>Property crime</span></p>
+    <p><div class="little-square" style="background-color:#b49530"></div><span>Other crime</span></p>
+</script>
+
+<!--handlebars template for polygon infowindows-->
+
+<script id="polygon-infowindow-template" type="text/x-handlebars-template">
+    <div class="polygon-infowindow">
+        <h4>{{neighborhood_formatted}}</h4>
+        <p>Crimes from {{from}} to {{to}}: {{crimes_this_period}}</p>
+        <p><a href="#" onclick="_gaq.push(['_trackEvent', '{{property_name}} Crime Map','Click link','To {{neighborhood}} neighborhood page']);set_neighborhood('{{neighborhood}}'); return false;">Neighborhood detail</a></p>
+    </div>
+</script>
+
+<!--handlebars template for marker infowindows-->
+
+<script id="marker-infowindow-template" type="text/x-handlebars-template">
+
+    <div class="marker-infowindow">
+        <h4>{{address}}</h4>
+        <p>{{crime}}</p>
+        <p>{{offense_date}}</p>
+    </div>
+</script>
+
+<script id="sharing-widget-template" type="text/x-handlebars-template">
+
+<span class="st_email" displayText="" st_url="{{permalink}}" st_title="Denver Post Crime App"></span>
+<span class="st_facebook" displayText="" st_url="{{permalink}}" st_title="Denver Post Crime App"></span>
+<span class="st_twitter" displayText="" st_url="{{permalink}}" st_title="Denver Post Crime App"></span>
+
+</script>
+
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+//google visualization libs we need
+google.load('visualization', '1', {packages: ["corechart"]});
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry"
+ ></script>
+<script src="http://crime.denverpost.com/lib/js/markerwithlabel_packed.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script src="http://crime.denverpost.com/lib/js/neighborhood-polys.json"></script>
+<script src="http://crime.denverpost.com/lib/js/neighborhood-population.json"></script>
+<script src="http://crime.denverpost.com/lib/js/map-style.js"></script>
+<!-- DEV
+<script src="http://crime.denverpost.com/lib/js/crime-map-min.js"></script>
+-->
+<script src="http://crime.denverpost.com/lib/js/raw/crime-map.js"></script>
+<script src="http://crime.denverpost.com/data/monthly_average.json"></script>
+<script src="http://data.digitalfirstmedia.com/lib/js/handlebars-1.0.rc.1.js"></script>
+<script src="http://crime.denverpost.com/lib/js/date.js"></script>
+<script src="http://crime.denverpost.com/lib/js/crime-map-config.js"></script>
+<!-- DEV
+<script src="http://crime.denverpost.com/lib/js/crime-map-functions-min.js"></script>
+-->
+<script src="http://crime.denverpost.com/lib/js/raw/crime-map-functions.js"></script>
+<script src="http://crime.denverpost.com/data/latest.json"></script>
+
+<script src="http://crime.denverpost.com/lib/js/bootstrap-tour/jquery.cookie.js"></script> <!-- remove this if you set Tour.useLocalStorage as true -->
+<script src="http://crime.denverpost.com/lib/js/bootstrap-tour/bootstrap-tooltip.js"></script>
+<script src="http://crime.denverpost.com/lib/js/bootstrap-tour/bootstrap-popover.js"></script>
+<script src="http://crime.denverpost.com/lib/js/bootstrap-tour/bootstrap-tour.min.js"></script>
+<!--sharethis js-->
+<script>var switchTo5x=true;</script>
+<script src="http://w.sharethis.com/button/buttons.js"></script>
+<script>stLight.options({publisher: "0c636fec-bbc1-4f55-976a-5b241cd72cd6", doNotHash: true, doNotCopy: false, hashAddressBar: true});</script>
+
+<!--end sharehis-->
+
+<!--Bartertown-->
+<script src="output/vendor-include.js"></script>
+        <script> dfmNav.initParams("mode|article", "site|denverpost", "pageTitle|Crime Map and Stats", "leaderboard|false", "thirdParty|true"); </script>
+
+<!--end Bartertown -->
+
+<!--analytics-->
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37303540-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--chartbeat -->
+
+    <script>
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.title = "Denver Crime Map";
+    _sf_async_config.uid = 2671;
+    _sf_async_config.domain = "denverpost.com";
+    _sf_async_config.sections = "crime map,crime,data";
+    _sf_async_config.useCanonical = true;
+    /** CONFIGURATION END **/
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement("script");
+        e.setAttribute("language", "javascript");
+        e.setAttribute("type", "text/javascript");
+        e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != "function") ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+    </script>
+
+</body>
+</html>
