@@ -1,6 +1,5 @@
 #!/bin/bash
-# Keep tabs on an Ooyala feed URL. Could work for any URL.
-# Sends an email if the length of the content is something that couldn't be correct.
+# Scrape the Denver Post nav bar and footer.
 # Example:
 # $ ./scrape.bash
 # Scrape a different URL
@@ -38,5 +37,6 @@ if [ $FILESIZE -lt 1000 ]; then
 fi
 
 python parse.py 
+./ftp.bash --dir $REMOTE_DIR --host $REMOTE_HOST
 
 exit 1
