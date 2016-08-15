@@ -4,7 +4,6 @@
 # $ ./scrape.bash
 # Scrape a different URL
 # $ ./scrape.bash --url http://extras.denverpost.com/
-source ./source.bash
 
 # Default arguments
 URL='http://www.denverpost.com/'

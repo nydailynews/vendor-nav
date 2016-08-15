@@ -3,6 +3,7 @@
 import sys
 import argparse
 import re
+import doctest
 from collections import OrderedDict
 import types
 import os.path
@@ -106,6 +107,9 @@ def main(args):
     parse.extract_parts(markup)
     parse.regex = 'footer'
     parse.extract_parts(markup)
+
+    # Remove these two elements from the footer
+    parse.content['footer'] = parse.content['footer'].replace('<li id="menu-item-101641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101641"><a href="https://vip.wordpress.com/">Powered by WordPress.com VIP</a></li>', '').replace('<li id="menu-item-2008971" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2008971"><a href="http://local.digitalfirstmedia.com/common/dfm/arbitration.pdf">Arbitration</a></li>')
 
     # Turn the nav markup into actionable javascript
     fh = open('html/template.js', 'rb')
