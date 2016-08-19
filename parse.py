@@ -109,7 +109,7 @@ def main(args):
     parse.extract_parts(markup)
 
     # Remove these two elements from the footer
-    parse.content['footer'] = parse.content['footer'].replace('<li id="menu-item-101641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101641"><a href="https://vip.wordpress.com/">Powered by WordPress.com VIP</a></li>', '').replace('<li id="menu-item-2008971" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2008971"><a href="http://local.digitalfirstmedia.com/common/dfm/arbitration.pdf">Arbitration</a></li>')
+    parse.content['footer'] = parse.content['footer'].replace('Powered by WordPress.com VIP', '').replace('Arbitration', '')
 
     # Turn the nav markup into actionable javascript
     fh = open('html/template.js', 'rb')
