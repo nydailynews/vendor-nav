@@ -73,8 +73,10 @@ var dfmNav = {
         else
         {
             this.css_checks();
+            $('#dfmHeader').css('visibility', 'hidden');
             this.add_header();
             this.add_footer();
+            var to = window.setTimeout( function() { $('#dfmHeader').css('visibility', 'visible'); }, 5000);
         }
         //var to = window.setTimeout("dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0');", 4000);
     }  
