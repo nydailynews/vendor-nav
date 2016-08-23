@@ -1,0 +1,1753 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" type="text/css" href="//cdn.scribblelive.com/Style/WhiteLabel.css?v=v114_1.0.6079.22551">
+    <link rel="Alternate" type="application/rss+xml" title="Recent Events" href="/api/feed/RSS_Recent.aspx">
+    <meta name="generator" content="ScribbleLive">
+    <script type="text/javascript">if( navigator.userAgent.match(/(Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini)/i) ){ document.location=decodeURIComponent("http%3a%2f%2flive.denverpost.com%2f%2fmobile%3fSiteId%3d428%26Theme%3d6291%26lang%3den"); }</script>
+    <script type="text/javascript" src="//cdn.scribblelive.com/js/pages/AllEvents.aspx?SiteId=428&v=v114_1.0.6079.22551&amp;lang=en&amp;IncludeDiscussion=1&amp;IncludeInlineAds=1"></script> 
+
+    <title>All Streams</title>
+
+    <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Live blogs, live chats and other live and breaking news events from Denver and Colorado.">
+    
+    <meta name="news_keywords" content="Live blogs, live chat, breaking news, live events, live, denver post, denver post live, @denverpost, twitter, facebook, social, updates">
+    
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="google-site-verification" content="2bKNvyyGh6DUlOvH1PYsmKN4KRlb-0ZI7TvFtuKLeAc">
+
+    <script type="text/javascript" src="http://extras.denverpost.com/media/js/jquery-min.js"></script>
+    <script type="text/javascript" src="http://extras.denverpost.com/media/js/dputils-min.js?v=3"></script>
+    <script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+
+    <link href="http://extras.mnginteractive.com/live/js/ownLocal/ownLocalStyles.css" type="text/css" rel="stylesheet">
+    <link href="http://extras.denverpost.com/scribble.css" type="text/css" rel="stylesheet">
+    
+<style type="text/css">/* Override region3 and other BT things ========== */
+
+#outerOuterRegion #outerLeftRegion #region2and3B=box #region3.region3 {
+    float:left!important;
+}
+
+#articleBox .articleFooterLinks, #articleBox .articlePositionFooter, #articleBox .articlePositionHeader, #articleBox .articleByline, #articleBox .articleOptions {
+    display:none!important;
+}
+
+/* Hide article comments ========== */
+
+.iupload_comments {
+    display:none;
+}
+
+/* Event Title ========== */
+
+h2#ThreadTitle {
+   margin: 10px 10px 10px 0;
+   padding: 0px;
+   color:#222; 
+   font-family: "Merriweather",Georgia,"Times New Roman",Times,serif !important;
+   font-size: 28px;
+}
+
+/* Listing page =========== */
+
+#AllEventsTabs {
+ height:40px;
+ margin-bottom:20px;
+ clear:both;
+}
+
+#AllEventsTabs li {
+ display: inline;
+ cursor: pointer;
+ margin-right: 0;
+ display: inline-block;
+ float: left;
+ padding: 9px 15px;
+ border-top: 1px solid #ddd;
+ border-right: 1px solid #ddd;
+ border-bottom: 1px solid #ddd;
+ cursor: pointer;
+ background-image: -moz-linear-gradient(top, #e5ebf3 0%, #ffffff 50%);
+ background-image: -ms-linear-gradient(top, #e5ebf3 0%, #ffffff 50%);
+ background-image: -webkit-gradient(linear, 0 0, 0 50%, from(#e5ebf3), to(#ffffff));
+ background-image: -webkit-linear-gradient(top, #e5ebf3 0%, #ffffff 50%);
+ background-image: -o-linear-gradient(top, #e5ebf3 0%, #ffffff 50%);
+ background-image: linear-gradient(top, #e5ebf3 0%, #ffffff 50%);
+ background-repeat: repeat-x;
+ color: #39547A !important;
+ font: bold 16px "Oxygen", "Trebuchet MS", "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+ text-transform: uppercase;
+ text-indent: 0;
+ width: auto;
+ height: auto;
+ text-decoration: none;
+}
+
+#AllEventsTabs li:first-child {
+ border-left: 1px solid #ddd;
+}
+
+#AllEventsTabs li.Selected {
+ text-decoration:none;
+ border-top: 1px solid #bbb;
+ border-right: 1px solid #bbb;
+ border-bottom: none;
+ border-left: 1px solid #bbb;
+ margin-top: -2px;
+ margin-left: -1px;
+ padding: 10px 15px;
+ background: #ffffff;
+ -webkit-border-top-left-radius: 2px;
+ -webkit-border-top-right-radius: 2px;
+ -moz-border-radius-topleft: 2px;
+ -moz-border-radius-topright: 2px;
+ border-top-left-radius: 2px;
+ border-top-right-radius: 2px;
+}
+
+#AllEventsTabs li.Selected:first-child {
+ margin-left:0;
+}
+
+#AllEventsTabs li.Selected:hover {
+ text-decoration:underline;
+}
+
+dl.ThreadsList dd a, dl.ThreadsList dd a:link, dl.ThreadsList dd a:visited {
+ color: #333;
+ font: bold 20px "Merriweather", Georgia, "Times New Roman", Times, serif !important;
+}
+
+dl.ThreadsList dd a:hover {
+ color: #39547a !important;
+ text-decoration: underline !important;
+}
+
+dl.ThreadsList dd span.Description {
+ color: #666;
+ font-size: 15px;
+ line-height: 1.3;
+ margin: 0 0 10px;
+}
+
+dl.ThreadsList dd span.DateTime {
+ font-size: 15px;
+}
+
+h4.Description {
+ display:none!important;
+}
+
+/* "Live" In Event Title ========== */
+
+h2#ThreadTitle em {
+   text-transform: uppercase;
+   font: 24px "Merriweather",Georgia,"Times New Roman",Times,serif !important;
+   font-weight: bold;
+}
+
+/* Description Under Event Title ========== */
+
+h3.Description {
+   color: #666;
+   font-family: "Merriweather",Georgia,"Times New Roman",Times,serif !important;
+   font-size: 15px;
+   font-weight: bold!important;
+}
+
+/* Post Content ========== */
+
+.Posts li .Content {
+   font-size: 15px!important;
+   font-family: Georgia,Times,"Times New Roman",serif!important;
+}
+
+/* Pagination Hover Colour ========== */
+
+ul.Pagination  li a:hover {
+   color: #f9f9f9;
+   border-color: #5278AE;
+}
+
+ul.Pagination li a {
+ font-size:13px;
+}
+
+/* Custom ========== */
+
+#Discussion ul#toolbarmenu  {
+   background: #5278AE;
+}
+
+#Discussion ul#toolbarmenu li a:hover  {
+   color: #f9f9f9!important;
+   background: #5278AE;
+   border-right: 1px solid #6488a1;
+}
+
+#Discussion ul#ToolbarMenu li a {
+    border-right: 1px solid #6488a1;
+}
+
+#Discussion ul#ToolbarMenu li a.Selected {
+    background: #6488a1;
+}
+
+ul.Pagination li a.Current, ul.Pagination li a.Current:hover {
+ color: #fff;
+ background: #39547A;
+ border: 1px solid #39547A;
+}
+
+.LiveArticle blockquote, #SinglePost blockquote, #SinglePost .PollPost, .Content blockquote {
+    font-size: 15px;
+    font-family: font: 15px Georgia, "Times New Roman", Times, serif !important;
+}
+
+.Posts li .Content a {
+   font-size: 15px!important;
+   line-height:1.3!important;
+   font-weight: bold;
+}
+
+.Posts li.Comment .Content {
+   color: #959595;
+}
+
+#Column1 #Discussion ul.Posts li.comment .Meta {
+    padding: 5px 0 20px;
+    clear: both;
+}</style></head>
+<body>
+
+<!-- Google Tag Manager Data Layer -->
+  <script>
+    var is_mobile = function() {
+      var check = false;
+      (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+      if ( check == true ) return 'YES';
+      return 'NO';
+    };
+    analyticsEvent = function() {};
+    analyticsSocial = function() {};
+    analyticsVPV = function() {};
+    analyticsClearVPV = function() {};
+    analyticsForm = function() {};
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'ga_ua':'UA-61435456-7',
+        'quantcast':'p-4ctCQwtnNBNs2',
+        'quantcast label': 'Denver',
+        'comscore':'6035443',
+        'errorType':'',
+        'Publisher Domain':'denverpost.com',
+        'Publisher Product':'denverpost.com',
+        'Dateline':'',
+        'Publish Hour of Day':'',
+        'Create Hour of Day':'',
+        'Update Hour of Day':'',
+        'Behind Paywall':'NO',
+        'Mobile Presentation':'NO',
+        'kv':'live news',
+        'Release Version':'',
+        'Digital Publisher':'denverpost.com',
+        'Platform':'vendor',
+        'Section':'Live Events',
+        'Taxonomy1':'News',
+        'Taxonomy2':'Live Events',
+        'Taxonomy3':document.location.pathname,
+        'Taxonomy4':'',
+        'Taxonomy5':'',
+        'Content Source':'denverpost.com',
+        'Canonical URL': '',
+        'Slug':'',
+        'Content ID':'',
+        'Page Type':'section',
+        'Publisher State':'CO',
+        'Byline':'',
+        'Content Title':'',
+        'URL':'',
+        'Page Title':'',
+        'User ID':''
+    });
+  </script>
+  <!-- End Google Tag Manager Data Layer -->
+<!-- GA Data Layer -->
+<!--
+<script type="text/javascript" src="http://local.medianewsgroup.com/common/dfm/ga-datalayer.js"></script>
+-->
+<!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TLFP4R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>
+(function(w,d,s,l,i) {
+   w[l]=w[l]||[];
+   w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+   var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+   j.async=true;
+   j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})
+(window,document,'script','dataLayer','GTM-TLFP4R');
+</script><!-- End Google Tag Manager -->
+
+<div id="dfmHeader"><!--Header Goes Here--></div>
+
+<div id="wrapper" style="width:1008px;margin:0 auto;margin-top:10px;margin-bottom:10px;">
+
+    <div class="rightRail" id="rightRail" style="float:right;width:300px;margin-left:20px;">
+
+<!-- Begin DFP Premium ad uniqueId: dfp-21 -->
+<div id='dfp-21' style="margin-bottom:10px;">
+    <ul>
+        <script type='text/javascript'>
+            googletag.defineSlot('/8013/denverpost.com/News',[[300,250]], 'dfp-21').addService(googletag.pubads()).setTargeting('pos',['Cube2_RRail_mid']).setTargeting('kv','twitter');
+            googletag.pubads().enableSyncRendering();
+            googletag.enableServices();                                            
+            googletag.display('dfp-21');
+        </script>
+    </ul>
+</div>
+<!-- End DFP Premium ad uniqueId: dfp-21 -->
+
+
+        <!-- TOP STORIES -->
+
+        <!-- <div class="complexListingBox">
+        <div class="otherItemBox"> -->
+            <div>
+                <a style="color:#39547A;text-decoration:none;text-transform:uppercase;" href="http://denverpost.com"><h2 style="font-family:'Oxygen','Trebuchet MS','Merriweather','Helvetica Neue',Helvetica,Arial,sans-serif !important;">Top Stories</h2></a>
+            </div>
+            <script type="text/javascript" src="http://extras.denverpost.com/cache/top_stories_vertical.js"></script>
+            <div style="clear:both;"></div>
+<!--             </div>
+</div> -->
+        <!-- Begin DFP Premium ad uniqueId: dfp-20 -->
+        <div id='dfp-20' style="margin-bottom:10px;">
+            <script type='text/javascript'>
+                googletag.defineSlot('/8013/denverpost.com/News',[[300,250],[300,600],[160,600],[300,1050]], 'dfp-20').addService(googletag.pubads()).setTargeting('pos',['Cube1_RRail_ATF']).setTargeting('kv','twitter');                                            
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();                                            
+                googletag.display('dfp-20');
+            </script>
+        </div>
+        <!-- End DFP Premium ad uniqueId: dfp-20 -->
+
+<!-- Begin DFP Premium ad uniqueId: dfp-22 -->
+<div id='dfp-22' style="margin-bottom:10px;">
+    <script type='text/javascript'>
+        googletag.defineSlot('/8013/denverpost.com/News',[[300,250]], 'dfp-22').addService(googletag.pubads()).setTargeting('pos',['Cube3_RRail_lower']).setTargeting('kv','twitter');
+        googletag.pubads().enableSyncRendering();
+        googletag.enableServices();                                            
+        googletag.display('dfp-22');
+    </script>
+</div>
+<!-- End DFP Premium ad uniqueId: dfp-22 -->
+
+<!-- <div id="ownLocalWidgy"></div> --><!--OwnLocal widget -->
+
+</div>
+
+<div class="insertScribbleHere" style="float:left;width:680px;">
+<div id='Column1'>
+    <div class="Document">
+        <ul id="AllEventsTabs" class="TabList">
+            <li id="Column1Area_LiveEventsTab" tabpanel="LiveEvents">Live Streams</li>
+            
+            
+            
+            <li tabpanel="AllEvents">All Streams</li>
+        </ul>
+
+        <div id="AllEvents_LiveEvents" class="TabPanel">
+            <h4 id="Column1Area_LiveHeader" class="Description">Live Streams</h4>
+            <dl id="Column1Area_LiveThreadsList" class="ThreadsList">
+                
+                        <dd>
+                            <a href="http://live.denverpost.com/Event/Colorado_Weather_and_Traffic_2">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/8/23/0398e36b-0bfd-4649-9061-6072bcf33cb6_300.jpg"></div>
+                                Colorado Weather and Traffic
+                            </a>
+                            <span class="DateTime">Nov 4, 2015 - 12:00 AM MDT</span>
+                            <span class="Description">Stay up-to-date with the latest weather and traffic updates from the Front Range.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+            </dl>
+        </div>
+        <div id="AllEvents_ScheduleEvents" class="TabPanel">
+            
+            
+        </div>
+        <div id="AllEvents_RecentlyClosed" class="TabPanel">
+            
+            
+        </div>
+        <div id="AllEvents_AllEvents" class="TabPanel">
+        <h4 class="Description">All Streams</h4>
+            <dl class="ThreadsList">
+                
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-San_Francisco_49ers_live_blog_Aug_20_2016">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/8/20/ef21d70d-c64d-497e-805c-a57ec48fa061_300.jpg"></div>
+                                Denver Broncos-San Francisco 49ers live blog Aug. 20, 2016
+                            </a>
+                            <span class="DateTime">Aug 20, 2016</span>
+                            <span class="Description">The Denver Broncos and San Francisco 49ers face each other in preseason action on Saturday, Aug. 20, 2016, at Sports Authority Field in Denver.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Chicago_Bears_live_blog_Aug_11_2016">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/8/10/df6fcd77-b833-4e05-882f-3eca7796f220_300.jpg"></div>
+                                Denver Broncos-Chicago Bears live blog Aug. 11, 2016
+                            </a>
+                            <span class="DateTime">Aug 11, 2016</span>
+                            <span class="Description">The Denver Broncos and Chicago Bears face each other in preseason action on Thursdsay, Aug. 11, 2016, at Solider Field in Chicago.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Broncos_training_camp_August_9_2016">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/8/9/1be6cc9b-df05-4593-b0d2-f7866730be09_300.jpg"></div>
+                                Denver Broncos training camp August 9, 2016
+                            </a>
+                            <span class="DateTime">Aug 9, 2016</span>
+                            <span class="Description">Latest updates and analysis from Denver Broncos training camp.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Democratic_National_Convention_7">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/7/25/1f9a23db-1240-4522-9dcf-9e9f80ca8568_300.jpg"></div>
+                                Democratic National Convention
+                            </a>
+                            <span class="DateTime">Jul 25, 2016 - 9:21 PM MDT</span>
+                            <span class="Description">Live posts from Colorado reporters and delegates from Philadelphia and the floor of the Democratic National Convention.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Donald_Trump_Sarah_Palin_attend_Western_Conservative_Summit_in_Denver">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/7/1/a78e7792-c46f-4a79-bd62-93aea398373c_300.jpg"></div>
+                                Donald Trump, Sarah Palin attend Western Conservative Summit in Denver
+                            </a>
+                            <span class="DateTime">Jul 3, 2016</span>
+                            <span class="Description">Donald Trump is set to make his first public trip to Colorado during his presidential campaign on July 1 to speak at the Western Conservative Summit in Denver.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/NBA_draft_2016">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/6/22/abe41af0-f895-4daa-b569-ba7d2e482a0d_300.jpg"></div>
+                                NBA draft 2016
+                            </a>
+                            <span class="DateTime">Jun 23, 2016 - 2:00 PM MDT</span>
+                            <span class="Description">Get live coverage and tweets on the Denver Nuggets and the 2016 NBA draft.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_high_school_track__field_2016_state_meet_live_blog">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/5/18/c957d1fa-8906-4b99-9f79-6feeb9ab156a_300.jpg"></div>
+                                Colorado high school track & field 2016 state meet live blog
+                            </a>
+                            <span class="DateTime">May 21, 2016</span>
+                            <span class="Description">A live blog tracking the 2016 Colorado high school track & field state meet results, May 19-21 at Jeffco Stadium in Lakewood.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_GOP_Senate_primary_debate_at_The_Denver_Post">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/5/17/10097e2f-cafc-4b85-ae18-c1cb65a69fc2_300.jpg"></div>
+                                Colorado GOP Senate primary debate at The Denver Post
+                            </a>
+                            <span class="DateTime">May 18, 2016</span>
+                            <span class="Description">The candidates for the GOP nomination for Colorado Senator face off in a debate at The Denver Post auditorium, hosted by Politics Editor Chuck Plunkett and DPTV director Molly Hughes.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_Blog_Rockies_host_the_D-backs_at_Coors_Field">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/5/12/56648492-5cbe-4103-bb49-53aee8c505d3_300.jpg"></div>
+                                Live Blog: Rockies host the D-backs at Coors Field
+                            </a>
+                            <span class="DateTime">May 11, 2016</span>
+                            <span class="Description">The Colorado Rockies take on the Arizona Diamondbacks Wednesday at 1:10 p.m. on May 11, 2016 at Coors Field in Denver.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Aurora_Theater_Shooting_Civil_Trial">
+                                
+                                Aurora Theater Shooting Civil Trial
+                            </a>
+                            <span class="DateTime">May 17, 2016</span>
+                            <span class="Description">In an Arapahoe County courtroom, 28 survivors of the Aurora theater shooting and relatives of the victims will attempt to convince a jury that Cinemark, the movie theater's owner, should be held accountable for the shooting.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/NFL_draft_2016_Live_Updates_Selections_Photos_Video_Analysis">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/5/8/a3fede58-5c76-49a7-a9f1-13fdb22c267d_300.jpg"></div>
+                                NFL draft 2016: Live Updates, Selections, Photos, Video, Analysis
+                            </a>
+                            <span class="DateTime">May 7, 2016</span>
+                            <span class="Description">Updates, news and analysis during the 2016 NFL draft.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_Blog_Rockies_host_the_Giants_at_Coors_Field">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/4/15/2bbb60d6-e44d-4db0-91ac-81b1e9837847_300.jpg"></div>
+                                Live Blog: Rockies host the Giants at Coors Field
+                            </a>
+                            <span class="DateTime">Apr 14, 2016</span>
+                            <span class="Description">The Colorado Rockies take on the San Francisco Giants Thursday, April 14, 2016 at Coors Field in Denver.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_DU_hockey_vs_North_Dakota">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/4/7/7cc80d5e-4852-4f17-b717-b28db78c264e_300.jpg"></div>
+                                Live blog: DU hockey vs. North Dakota
+                            </a>
+                            <span class="DateTime">May 17, 2016</span>
+                            <span class="Description">The University of Denver hockey team faces North Dakota in the semi-final round of the Frozen Four, NCAA championships.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_Colorado_Rockies_2016_home_opener_vs_San_Diego_Padres">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/4/7/a7ea35b8-0249-4c0f-8de0-cc6859faba46_300.jpg"></div>
+                                Live blog: Colorado Rockies 2016 home opener vs. San Diego Padres
+                            </a>
+                            <span class="DateTime">Apr 14, 2016</span>
+                            <span class="Description">The Colorado Rockies host the San Diego Padres in their 2016 Coors Field home opener.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_Von_Miller_on_Dancing_With_The_Stars">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/21/b7a4a417-7f05-4819-8c3b-cad193b1c775_300.jpg"></div>
+                                Live blog: Von Miller on "Dancing With The Stars"
+                            </a>
+                            <span class="DateTime">Mar 21, 2016</span>
+                            <span class="Description">Get live updates on Denver Broncos linebacker Von Miller's appearance on "Dancing With The Stars" from The Denver Post's Nicki Jhabvala.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/2016_NCAA_Tournament_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/16/aa8bf4bc-f634-4bba-8a8d-a609cbe224e1_300.jpg"></div>
+                                2016 NCAA Tournament live blog
+                            </a>
+                            <span class="DateTime">Mar 31, 2016</span>
+                            <span class="Description">Updates and analysis from the 2016 NCAA Tournament.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_CU_Buffs_basketball_vs_Arizona_Wildcats_in_the_Pac-12_tournament">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/10/891e183b-84ce-425c-86e8-7a09b3fde82c_300.jpg"></div>
+                                Live blog: CU Buffs basketball vs. Arizona Wildcats in the Pac-12 tournament
+                            </a>
+                            <span class="DateTime">Mar 10, 2016 - 2:54 PM MDT</span>
+                            <span class="Description">Live coverage as the University of Colorado Buffaloes basketball team takes on the University of Arizona Wildcats in the Pac-12 tournament.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_CU_Buffs_basketball_vs_WSU_Cougars_in_the_Pac-12_tournament">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/9/53a3cf1c-a535-4646-8cde-8734dd53f491_300.jpg"></div>
+                                Live blog: CU Buffs basketball vs. WSU Cougars in the Pac-12 tournament
+                            </a>
+                            <span class="DateTime">Mar 9, 2016 - 3:36 PM MDT</span>
+                            <span class="Description">Live coverage as the University of Colorado Buffaloes basketball team takes on the Washington State University Cougars in the Pac-12 tournament.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_NFL_Free_Agency_3">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/9/0533fb19-2085-41fb-8568-38c6eace081c_300.jpg"></div>
+                                Live blog: NFL Free Agency
+                            </a>
+                            <span class="DateTime">Mar 9, 2016 - 9:15 AM MDT</span>
+                            <span class="Description">Follow live coverage of NFL free agency curated by the Denver Post, scheduled to open at 2 p.m. MT on March 9, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Peyton_Manning_retirement_press_conference">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/7/6f5da4ea-6f05-4198-8105-d1d3a87fbbec_300.jpg"></div>
+                                Peyton Manning's retirement press conference
+                            </a>
+                            <span class="DateTime">Mar 7, 2016</span>
+                            <span class="Description">Denver Broncos quarterback Peyton Manning announces his retirement from the NFL at 11 a.m. Monday at the UCHealth Training Center.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_caucuses_and_Super_Tuesday_2016">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/3/1/7fcf6a97-9ed4-4250-9e9a-02989aa5fbab_300.jpg"></div>
+                                Colorado caucuses and Super Tuesday 2016
+                            </a>
+                            <span class="DateTime">Mar 1, 2016 - 1:58 PM MDT</span>
+                            <span class="Description">Live reactions and results from the Colorado presidential caucuses and Super Tuesday results from around the country.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_Avalanche_vs_Detroit_Red_Wings_at_Coors_Field_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/27/cca7eb35-5f2a-4473-ad9f-7fbbd73b175a_300.jpg"></div>
+                                Colorado Avalanche vs. Detroit Red Wings at Coors Field live blog
+                            </a>
+                            <span class="DateTime">Feb 27, 2016</span>
+                            <span class="Description">A live blog tracking updates and analysis from the Colorado Avalanche vs. Detroit Red Wings game at Coors Field, Feb. 27, 2016.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_Avs_Red_Wings_alumni_game">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/26/891e0886-c7aa-40fa-96b9-bd0b825eadef_300.jpg"></div>
+                                Live blog: Avs, Red Wings alumni game
+                            </a>
+                            <span class="DateTime">Feb 26, 2016</span>
+                            <span class="Description">The Colorado Avalanche alumni take on the Detroit Red Wings alumni at Coors Field in Denver, Friday, Feb. 26, 2016.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_Updates_NBA_2016_trading_deadline">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/18/f0af0fda-8cf8-4212-8eea-ccf486e0e199_300.jpg"></div>
+                                Live Updates: NBA 2016 trading deadline
+                            </a>
+                            <span class="DateTime">Feb 18, 2016</span>
+                            <span class="Description">Latest news and reports of potential deals as the NBA's trading deadline (Thursday) approaches.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_high_school_wrestling_2016_state_tournament_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/19/d79e68ba-9d17-4a4f-b874-1af7d1cea569_300.jpg"></div>
+                                Colorado high school wrestling 2016 state tournament live blog
+                            </a>
+                            <span class="DateTime">Feb 21, 2016</span>
+                            <span class="Description">A live blog tracking the 2016 Colorado high school wrestling state tournament at Pepsi Center from Feb. 18-20.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos_Parade_Live_Updates_Photos_Video_and_More">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/9/8b667277-53f9-433f-a005-73f93d2c289b_300.jpg"></div>
+                                Denver Broncos Parade Live: Updates, Photos, Video and More
+                            </a>
+                            <span class="DateTime">Feb 9, 2016</span>
+                            <span class="Description">The Denver Broncos will celebrate their third world championship in Super Bowl 50 on Tuesday starting at noon in downtown Denver with a parade that begins at Denver's Union Station and ends at Civic Center Park.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/2016_Colorado_Signing_Day_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/3/3345debf-451d-42c3-9f1d-ac3fd2c2962e_300.jpg"></div>
+                                2016 Colorado Signing Day live blog
+                            </a>
+                            <span class="DateTime">Feb 3, 2016</span>
+                            <span class="Description">Here's a live blog tracking 2016 National Signing Day in Colorado.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Super_Bowl_50_Denver_Broncos_vs_Carolina_Panthers_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/28/22232436-f51e-42fd-8ac5-1d9bdf8eff6c_300.jpg"></div>
+                                Super Bowl 50: Denver Broncos vs. Carolina Panthers live blog
+                            </a>
+                            <span class="DateTime">Feb 8, 2016</span>
+                            <span class="Description">Live coverage of Super Bowl 50: Denver Broncos vs. Carolina Panthers, from Santa Clara, California.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Winter_X_Games_Aspen_2016">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/2/1/f46722c1-e15b-45a5-a581-5450d38ab4e1_300.jpg"></div>
+                                Winter X Games Aspen 2016 Live Updates, Photos, Video and More
+                            </a>
+                            <span class="DateTime">Jan 31, 2016</span>
+                            <span class="Description">Live updates and coverage from Winter X Games Aspen 2016 at Buttermilk Mountain from Jan. 28-31, 2016. The games are now in their 20th year.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-New_England_Patriots_live_blog_Jan_24_2016">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/21/38651e9e-b824-4b1b-a7e6-94cf035bd8c6_300.jpg"></div>
+                                Denver Broncos-New England Patriots live blog Jan. 24, 2016
+                            </a>
+                            <span class="DateTime">Jan 24, 2016</span>
+                            <span class="Description">The Denver Broncos and New England Patriots face each other in AFC playoff action on Sunday, Jan. 24, 2016, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Broncos_vs_Patriots_AFC_championship_game_chat">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/19/ce133f9b-2851-49f0-b8be-07aa8052af07_300.jpg"></div>
+                                Broncos vs. Patriots: AFC championship game chat
+                            </a>
+                            <span class="DateTime">Jan 20, 2016</span>
+                            <span class="Description">Denver Post NFL reporter Cameron Wolfe answers reader questions about the Denver Broncos vs. New England Patriots AFC championship game.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Broncos_vs_Steelers_Playoff_chat">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/13/ed7c61db-4944-4f97-9648-f5e7370860cf_300.jpg"></div>
+                                Broncos vs. Steelers: Playoff chat
+                            </a>
+                            <span class="DateTime">Jan 17, 2016</span>
+                            <span class="Description">Denver Post NFL reporter Cameron Wolfe answers reader questions about the Denver Broncos vs. Pittsburgh Steelers playoff matchup.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-San_Diego_Chargers_live_blog_Jan_17_2016">
+                                
+                                Denver Broncos-San Diego Chargers live blog Jan. 17, 2016
+                            </a>
+                            <span class="DateTime">Jan 10, 2016</span>
+                            <span class="Description">The Denver Broncos and Pittsburgh Steelers face each other in AFC playoff action on Sunday, Jan. 17, 2016, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Pittsburgh_Steelers_live_blog_Jan_17_2016">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/10/dbc46036-6ad4-4fbe-81f9-d2cab5ae9549_300.jpg"></div>
+                                Denver Broncos-Pittsburgh Steelers live blog Jan. 17, 2016
+                            </a>
+                            <span class="DateTime">Jan 17, 2016</span>
+                            <span class="Description">The Denver Broncos and Pittsburgh Steelers face each other in AFC playoff action on Sunday, Jan. 17, 2016, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Broncos_playoffs_live_chat">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/6/32f49ce4-1d41-4564-bdd4-289cda87337e_300.jpg"></div>
+                                Broncos playoffs live chat
+                            </a>
+                            <span class="DateTime">Jan 6, 2016</span>
+                            <span class="Description">Denver Post NFL reporter Cameron Wolfe answers questions from readers about the Denver Broncos as they head into the playoffs as the No. 1 seed.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-San_Diego_Chargers_live_blog_Jan_3_2016">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2016/1/3/0f1819f3-10d7-419e-bd7a-a59c0f9e1232_300.jpg"></div>
+                                Denver Broncos-San Diego Chargers live blog Jan. 3, 2016
+                            </a>
+                            <span class="DateTime">Jan 3, 2016</span>
+                            <span class="Description">The Denver Broncos and San Diego Chargers face each other in Week 17 action on Sunday, Jan. 3, 2016, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_football_vs_Nevada_Wolf_Pack_in_the_Arizona_Bowl">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/29/3c142601-ebd4-45dd-98a2-8776b1a61674_300.jpg"></div>
+                                CSU Rams football vs. Nevada Wolf Pack in the Arizona Bowl
+                            </a>
+                            <span class="DateTime">Dec 29, 2015</span>
+                            <span class="Description">CSU Rams football take on the Nevada Wolf Pack in the Arizona Bowl at Arizona Stadium in Tucson, Ariz., Tuesday, Dec. 29, 2015 at 5:30 p.m.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Cincinnati_Bengals_live_blog_Dec_28_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/28/6bc69852-43f6-42a2-a9a6-6fc61ccb2711_300.jpg"></div>
+                                Denver Broncos-Cincinnati Bengals live blog Dec. 28, 2015
+                            </a>
+                            <span class="DateTime">Dec 28, 2015 - 6:28 PM MDT</span>
+                            <span class="Description">The Denver Broncos and Cincinnati Bengals face each other in Week 16 action on Monday, Dec. 28, 2015, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Pittsburgh_Steelers_live_blog_Dec_20_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/20/353b1881-d4b1-428d-b6f3-c1fa2e1719ce_300.jpg"></div>
+                                Denver Broncos-Pittsburgh Steelers live blog Dec. 20, 2015
+                            </a>
+                            <span class="DateTime">Dec 20, 2015</span>
+                            <span class="Description">The Denver Broncos and Pittsburgh Steelers face each other in Week 15 action on Sunday, Dec. 20, 2015, at Heinz Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Oakland_Raiders_live_blog_Dec_13_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/13/85441ee1-afb8-4ff4-9eb9-c68003424c1a_300.jpg"></div>
+                                Denver Broncos-Oakland Raiders live blog Dec. 13, 2015
+                            </a>
+                            <span class="DateTime">Dec 13, 2015</span>
+                            <span class="Description">The Denver Broncos and Oakland Raiders face each other in Week 14 action on Sunday, Dec. 13, 2015, at Sports Authority Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_Blog_Minnesota_Wild_at_Colorado_Avalanche">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/8/1919b7b8-4ec9-4d71-8c29-f7b9b31862ca_300.jpg"></div>
+                                Live Blog: Minnesota Wild at Colorado Avalanche
+                            </a>
+                            <span class="DateTime">Dec 8, 2015</span>
+                            <span class="Description">Minnesota Wild at Colorado Avalanche - Live: Score, Stats, Photos, Video</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-San_Diego_Chargers_live_blog_Dec_6_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/6/24f3bce0-c1f2-4fbf-bd0b-032ae4820930_300.jpg"></div>
+                                Denver Broncos-San Diego Chargers live blog Dec. 6, 2015
+                            </a>
+                            <span class="DateTime">Dec 6, 2015</span>
+                            <span class="Description">The Denver Broncos and San Diego Chargers face each other in Week 13 action on Sunday, Dec. 6, 2015, at Qualcomm Stadium.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_State_Championship_Live_Blog_3A_4A_5A">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/5/8ec79faf-d55e-4952-bb2f-9dc7e0395958_300.jpg"></div>
+                                Colorado High School Football State Championship Live Blog: 3A, 4A, 5A
+                            </a>
+                            <span class="DateTime">Dec 5, 2015</span>
+                            <span class="Description">Follow live game updates and analysis for the Colorado high school football state championship games on Saturday, Dec. 5, 2015 for Class 3A, 4A and 5A.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/San_Bernardino_Shootings_Live_updates_photos_video_and_more">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/12/3/2f81ece1-ff14-4d13-bfaf-c623c86cf457_300.jpg"></div>
+                                San Bernardino Shootings: Live updates, photos, video and more
+                            </a>
+                            <span class="DateTime">Dec 4, 2015</span>
+                            <span class="Description">As many as three heavily armed attackers opened fire on a banquet at a social services center for the disabled Wednesday, killing 14 people and seriously wounding more than a dozen "as if they were on a mission," authorities said.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-New_England_Patriots_live_blog_Nov_29_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/29/934b2c01-f098-4517-a4b6-195a4202788a_300.jpg"></div>
+                                Denver Broncos-New England Patriots live blog Nov. 29, 2015
+                            </a>
+                            <span class="DateTime">Nov 29, 2015</span>
+                            <span class="Description">The Denver Broncos and New England Patriots face each other in Week 12 action on Sunday, Nov. 29, 2015, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_State_Rams_vs_Fresno_State_Bulldogs">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/29/19ccf833-88b8-4537-ba00-dea711ab9479_300.jpg"></div>
+                                Colorado State Rams vs. Fresno State Bulldogs
+                            </a>
+                            <span class="DateTime">Nov 29, 2015</span>
+                            <span class="Description">Colorado State Rams vs. Fresno State Bulldogs on Nov. 28, 2015</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Planned_Parenthood_shooting_in_Colorado_Springs">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/27/3c3e15e5-d16b-4aab-9719-f27c1d9ff367_300.jpg"></div>
+                                Planned Parenthood shooting in Colorado Springs: Live Updates, Photos, Video, More
+                            </a>
+                            <span class="DateTime">Nov 30, 2015</span>
+                            <span class="Description">Live udpates from an ongoing active shooter situation near a Colorado Springs branch of Planned Parenthood Friday afternoon.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/NASCAR_Sprint_Cup_Series_season_finale_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/22/0697821a-b302-411b-803e-ee5f12699930_300.jpg"></div>
+                                NASCAR Sprint Cup Series season finale live blog
+                            </a>
+                            <span class="DateTime">Jan 28, 2016</span>
+                            <span class="Description">Martin Truex Jr. of Denver-based Furniture Row Racing attempts to win the NASCAR Sprint Cup Series season finale in Homestead, Fla., Nov. 22, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Chicago_Bears_live_blog_Nov_22_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/22/034159bd-023d-4fb7-ba71-5dc56d33be92_300.jpg"></div>
+                                Denver Broncos-Chicago Bears live blog Nov. 22, 2015
+                            </a>
+                            <span class="DateTime">Nov 22, 2015</span>
+                            <span class="Description">The Denver Broncos and Chicago Bears face each other in Week 11 action on Sunday, Nov. 22, 2015, at Soldier Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_football_vs_New_Mexico_Lobos">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/21/221c5898-fc73-403c-acfb-714d29691143_300.jpg"></div>
+                                CSU Rams football vs. New Mexico Lobos
+                            </a>
+                            <span class="DateTime">Nov 21, 2015</span>
+                            <span class="Description">The Colorado State Rams football team takes on the New Mexico Lobos at Branch Field at University Stadium at 3:30 p.m. Saturday, Nov. 21, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Live_Blog_Playoffs_3">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/21/60df6cb0-47cd-4a72-9e3b-03975d63182c_300.jpg"></div>
+                                Colorado High School Football Live Blog: Playoffs
+                            </a>
+                            <span class="DateTime">Nov 20, 2015</span>
+                            <span class="Description">A live blog of Colorado high school football playoff games for all classifications.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_football_vs_Washington_State_Cougars">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/17/ac9c26fe-bfb2-4b57-a1af-c337fad6364e_300.jpg"></div>
+                                CU Buffs football vs. Washington State Cougars
+                            </a>
+                            <span class="DateTime">Nov 22, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes football team takes on Washington State University Cougars at Clarence D. Martin Stadium, at 8:45 p.m. Saturday, Nov. 21, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Kansas_City_Chiefs_live_blog_Nov_15_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/15/dbbf2fac-3fcb-4eae-a00a-c02036a322bd_300.jpg"></div>
+                                Denver Broncos-Kansas City Chiefs live blog Nov. 15, 2015
+                            </a>
+                            <span class="DateTime">Nov 22, 2015</span>
+                            <span class="Description">The Denver Broncos and Kansas City Chiefs face each other in Week 10 action on Sunday, Nov. 15, 2015, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_football_vs_UNLV_Rebels">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/14/ea3d6795-e627-4311-8d50-63b6f8f320bb_300.jpg"></div>
+                                CSU Rams football vs. UNLV Rebels
+                            </a>
+                            <span class="DateTime">Nov 14, 2015</span>
+                            <span class="Description">The Colorado State University Rams take on the UNLV Rebels at 5 p.m., Nov. 14, 2015, at Sonny Lubick Field at Hughes Stadium, Fort Collins, Colorado.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Live_Blog_Playoffs_2">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/14/645b3d70-b713-4511-8a4a-df730760462e_300.jpg"></div>
+                                Colorado High School Football Live Blog: Playoffs
+                            </a>
+                            <span class="DateTime">Nov 13, 2015</span>
+                            <span class="Description">A live blog of Colorado high school football playoff games for all classifications.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_football_vs_USC_Trojans">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/13/635e9ec3-56af-4787-82d3-14c7b4444a4c_300.jpg"></div>
+                                CU Buffs football vs. USC Trojans
+                            </a>
+                            <span class="DateTime">Nov 14, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes football team takes on the University of Southern California Trojans at Folsom Field, at 7 p.m. Friday, Nov. 13, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Indianapolis_Colts_Live_Blog_Nov_8_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/8/87b4de1c-71bb-4cee-89ed-108d73982db6_300.jpg"></div>
+                                Denver Broncos-Indianapolis Colts Live Blog Nov. 8, 2015
+                            </a>
+                            <span class="DateTime">Nov 14, 2015</span>
+                            <span class="Description">The Denver Broncos take on the Indianapolis Colts at Lucas Oil Stadium in Week 9, Nov. 8, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_football_vs_Wyoming_Cowboys">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/7/a1bfc221-cf01-40aa-b8c7-786b542d2162_300.jpg"></div>
+                                CSU Rams football vs. Wyoming Cowboys
+                            </a>
+                            <span class="DateTime">Nov 7, 2015</span>
+                            <span class="Description">Colorado State Rams football vs. Wyoming Cowboys at Jonah Field at War Memorial Stadium, Laramie, Wyoming, at 1 p.m., Nov. 7, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_football_vs_Stanford_Cardinal">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/7/dc76ba7b-cfbe-4649-81e2-41b115c1ce5e_300.jpg"></div>
+                                CU Buffs football vs. Stanford Cardinal
+                            </a>
+                            <span class="DateTime">Nov 7, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes football team takes on the Stanford Cardinal at Folsom Field in Boulder, Colorado at 11 a.m., Nov. 7, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Live_Blog_Playoffs">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/7/cd352094-7226-4c55-a2af-783aa498bbc6_300.jpg"></div>
+                                Colorado High School Football Live Blog: Playoffs
+                            </a>
+                            <span class="DateTime">Nov 6, 2015 - 5:23 PM MDT</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Class 4A/3A's Week 10 and playoffs for all other classifications.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_Weather_and_Traffic_2">
+                                <div class="EventImage"><img src="https://images.scribblelive.com/2016/8/23/0398e36b-0bfd-4649-9061-6072bcf33cb6_300.jpg"></div>
+                                Colorado Weather and Traffic
+                            </a>
+                            <span class="DateTime">Aug 23, 2016</span>
+                            <span class="Description">Stay up-to-date with the latest weather and traffic updates from the Front Range.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_Blog_Colorado_Election_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/3/60760ce8-4795-47ea-8395-e847c9e084ad_300.jpg"></div>
+                                Live Blog: Colorado Election 2015
+                            </a>
+                            <span class="DateTime">Nov 3, 2015 - 2:40 PM MDT</span>
+                            <span class="Description">Tracking results on Election Day 2015 in Colorado, including several big-ticket Denver ballot measures, city elections in Aurora and Lakewood, and combative school board recalls in Jefferson County.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Green_Bay_Packers_live_blog_Nov_1_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/11/1/6581207e-61cd-4e69-9b1c-70ec26d67a09_300.jpg"></div>
+                                Denver Broncos-Green Bay Packers live blog Nov. 1, 2015
+                            </a>
+                            <span class="DateTime">Nov 1, 2015</span>
+                            <span class="Description">The Denver Broncos and Green Bay Packers face each other in Week 8 action on Sunday, Nov. 1, 2015, at Sports Authority Field at Mile High.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_vs_San_Diego_State_Aztecs">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/31/8c76b395-1466-4e6b-87f6-5797c924a30d_300.jpg"></div>
+                                CSU Rams vs. San Diego State Aztecs
+                            </a>
+                            <span class="DateTime">Nov 3, 2015</span>
+                            <span class="Description">Colorado State Rams vs. San Diego State Aztecs at Sonny Lubick Field at Hughes Stadium, Fort Collins, Colorado, Oct. 31, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_at_UCLA_Bruins_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/31/f27e8616-2fbc-4485-b90a-02fb6dc28da4_300.jpg"></div>
+                                CU Buffs at UCLA Bruins live blog
+                            </a>
+                            <span class="DateTime">Oct 31, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes take on the UCLA Bruins in Pasadena, Calif., Oct. 31, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_9_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/29/a5b46397-eac5-4edb-9bad-9538abfb8466_300.jpg"></div>
+                                Colorado High School Football Week 9 Live Blog
+                            </a>
+                            <span class="DateTime">Oct 30, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 9.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Nuggets_season_opener_vs_Houston_Rockets">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/28/24fd6263-d6e9-4b55-bb5f-06f2dc459ade_300.jpg"></div>
+                                Denver Nuggets season opener at Houston Rockets
+                            </a>
+                            <span class="DateTime">Oct 29, 2015</span>
+                            <span class="Description">The Denver Nuggets take on the Houston Rockets at Toyota Center at 6 p.m. Oct. 28, 2015 in their season opener.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_Blog_GOP_Debate_at_CU_Boulder">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/27/6399a5ed-3069-4845-af60-7dc16c1be1f6_300.jpg"></div>
+                                GOP Debate Live Updates at University of Colorado Boulder
+                            </a>
+                            <span class="DateTime">Oct 28, 2015</span>
+                            <span class="Description">CNBC will host its Republican Presidential Debate at CU Boulder. The main debate will feature Jeb Bush, Ben Carson, Chris Christie, Ted Cruz, Carly Fiorina, Mike Huckabee, John Kasich, Rand Paul, Marco Rubio, Donald Trump. Follow along for live coverage around the campus, inside the media room and more.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_football_at_Oregon_State_Beavers">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/23/9630208d-b14f-4cb0-a654-c36237dc7e4c_300.jpg"></div>
+                                CU Buffs football at Oregon State Beavers
+                            </a>
+                            <span class="DateTime">Oct 25, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes football team takes on the Oregon State University Beavers at 8:30 p.m. Saturday, Oct. 24, at Reser Stadium, Corvallis, Oregon.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_8_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/22/5d5e9686-926c-4822-afed-e01e4fc5a7b1_300.jpg"></div>
+                                Colorado High School Football Week 8 Live Blog
+                            </a>
+                            <span class="DateTime">Oct 23, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 8.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Cleveland_Browns_live_blog_Oct_18_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/18/9945f55b-f1e1-4731-98cb-06b2c96df60e_300.jpg"></div>
+                                Denver Broncos-Cleveland Browns live blog Oct. 18, 2015
+                            </a>
+                            <span class="DateTime">Oct 18, 2015</span>
+                            <span class="Description">The Denver Broncos and Cleveland Browns face each other in Week 6 action on Sunday, Oct. 18, 2015, at FirstEnergy Stadium.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_vs_Arizona_Wildcats_football">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/17/f033fc64-1fa0-44e3-8183-c6e2d1d0201f_300.jpg"></div>
+                                CU Buffs vs. Arizona Wildcats football
+                            </a>
+                            <span class="DateTime">Oct 18, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes take on the University of Arizona Wildcats at 7 p.m. at Folsom Field, Boulder, Oct. 17, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_vs_Air_Force_Academy_Falcons_football">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/17/f3025e58-8dc7-495a-9c30-97d43b5cf942_300.jpg"></div>
+                                CSU Rams vs. Air Force Academy Falcons football
+                            </a>
+                            <span class="DateTime">Oct 17, 2015</span>
+                            <span class="Description">The Colorado State Rams take on the Air Force Academy Falcons at 1:30 p.m. at Sonny Lubick Field at Hughes Stadium in Fort Collins, Saturday Oct. 17, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_7_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/15/5e0a2af7-9bc9-4ad0-99f0-bee8d6a2dac5_300.jpg"></div>
+                                Colorado High School Football Week 7 Live Blog
+                            </a>
+                            <span class="DateTime">Oct 16, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 7.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Boys_Tennis_2015_State_Tournament">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/15/41db2562-a251-4cd5-b47a-d3a457eeee31_300.jpg"></div>
+                                Colorado High School Boys Tennis 2015 State Tournament
+                            </a>
+                            <span class="DateTime">Oct 15, 2015</span>
+                            <span class="Description">Live scores, updates and analysis from the 2015 Colorado high school boys Class 5A and 4A tennis state tournaments.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Oakland_Raiders_live_blog_Oct_11_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/11/5264fed7-5d2e-425f-ad61-d811153c4c9b_300.jpg"></div>
+                                Denver Broncos-Oakland Raiders live blog Oct. 11, 2015
+                            </a>
+                            <span class="DateTime">Oct 11, 2015</span>
+                            <span class="Description">The Denver Broncos and Oakland Raiders face each other in Week 5 action on Sunday, Oct. 11, 2015, at O.co Stadium.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CSU_Rams_vsBoise_State">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/10/7e5e78df-24bb-4ed2-89c8-2eeb5784b7b6_300.jpg"></div>
+                                CSU Rams vs. Boise State
+                            </a>
+                            <span class="DateTime">Oct 10, 2015</span>
+                            <span class="Description">The Colorado State Rams take on the Boise State Broncos at Sonny Lubick Field at Hughes Stadium, Fort Collins, Colorado, Oct. 10. 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_at_Arizona_State_Sun_Devils_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/10/50f7b540-c105-4b36-a3a7-6f3999564e52_300.jpg"></div>
+                                CU Buffs at Arizona State Sun Devils live blog
+                            </a>
+                            <span class="DateTime">Oct 16, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes take on the Arizona State University Sun Devils in Tempe, Ariz., Oct. 10, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_6_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/8/d72e5066-1811-4ccf-b8b4-bba6816c107c_300.jpg"></div>
+                                Colorado High School Football Week 6 Live Blog
+                            </a>
+                            <span class="DateTime">Oct 9, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 6.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_Avalanche_vs_Minnesota_Wild_season_opener_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/8/92d6369f-2b7b-4e36-a891-cd028df5e4b2_300.jpg"></div>
+                                Minnesota Wild at Colorado Avalanche season opener live blog
+                            </a>
+                            <span class="DateTime">Oct 8, 2015</span>
+                            <span class="Description">The Colorado Avalanche play the Minnesota Wild at Pepsi Center in Denver at 7 p.m. on Thursday, Oct. 8, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Minnesota_Vikings_Live_Blog_Sept_27_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/4/b7eb58c3-3c61-4e62-ad2e-119a664aad34_300.jpg"></div>
+                                Denver Broncos-Minnesota Vikings Live Blog Oct. 4, 2015
+                            </a>
+                            <span class="DateTime">Oct 4, 2015</span>
+                            <span class="Description">The Denver Broncos and Minnesota Vikings face each other in Week 4 action on Sunday, Oct. 4, 2015, at Sports Authority Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_vs_Oregon_Ducks_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/4/f987409a-3cbf-4de8-ac79-0efd1eb2d3e8_300.jpg"></div>
+                                CU Buffs vs Oregon Ducks live blog
+                            </a>
+                            <span class="DateTime">Oct 3, 2015 - 8:00 PM MDT</span>
+                            <span class="Description">Live coverage of the CU Buffaloes football team against the Oregon Ducks in a Pac-12 game at Folsom Field in Boulder, Oct. 3, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos_chat">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/2/3d8baacd-07ec-4c1f-8d9b-36142c53a6ee_300.jpg"></div>
+                                Denver Broncos chat
+                            </a>
+                            <span class="DateTime">Oct 2, 2015</span>
+                            <span class="Description">The Denver Post is hosting a Denver Broncos live chat with NFL Reporter Cameron Wolfe.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_5_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/10/1/1ef058c6-5593-47f4-a3f3-e86ded579706_300.jpg"></div>
+                                Colorado High School Football Week 5 Live Blog
+                            </a>
+                            <span class="DateTime">Oct 2, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 5.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_4_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/24/b5c6ca9e-aa9c-421d-a15c-7cb3d5da869b_300.jpg"></div>
+                                Colorado High School Football Week 4 Live Blog
+                            </a>
+                            <span class="DateTime">Sep 25, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 4.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Detroit_Lions_Live_Blog_Sept_27_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/29/0e52e54f-7398-4c76-8080-82adc7bdb8de_300.jpg"></div>
+                                Denver Broncos-Detroit Lions Live Blog Sept. 27, 2015
+                            </a>
+                            <span class="DateTime">Sep 27, 2015 - 5:01 PM MDT</span>
+                            <span class="Description">The Denver Broncos and Detroit Lions face each other in Week 3 action on Saturday, Sept. 17, 2015, at Ford Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Rocky_Mountain_Showdown_live_blog_CU_Buffs_vs_CSU_Rams">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/19/69fd1370-8a50-4a3e-8fb9-33a50896f810_300.jpg"></div>
+                                Rocky Mountain Showdown live blog: CU Buffs vs. CSU Rams
+                            </a>
+                            <span class="DateTime">Sep 19, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes take on the Colorado State University Rams in the Rocky Mountain Showdown at Sports Authority Field at Mile High on Saturday, Sept. 19, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_3_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/17/9de51999-0a11-4237-b97a-f86cf72578e2_300.jpg"></div>
+                                Colorado High School Football Week 3 Live Blog
+                            </a>
+                            <span class="DateTime">Sep 18, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 3.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Kansas_City_Chiefs_live_blog_Sept_17_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/16/3bb7052a-b537-4a40-a386-ab0bef6a858b_300.jpg"></div>
+                                Denver Broncos-Kansas City Chiefs live blog Sept. 17, 2015
+                            </a>
+                            <span class="DateTime">Sep 17, 2015 - 4:25 PM MDT</span>
+                            <span class="Description">The Denver Broncos and Kansas City Chiefs face each other in Week 2 action on Saturday, Sept. 17, 2015, at Arrowhead Stadium.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Baltimore_Ravens_live_blog_Sept_13_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/13/6e011a7b-63fa-492e-867c-dbb1578ebe17_300.jpg"></div>
+                                Denver Broncos-Baltimore Ravens live blog Sept. 13, 2015
+                            </a>
+                            <span class="DateTime">Sep 13, 2015</span>
+                            <span class="Description">The Denver Broncos and Baltimore Ravens face each other in the teams' regular-season opener on Saturday, Sept. 13, 2015, at Sports Authority Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Live_blog_CU_Buffs_football_vs_UMass">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/11/f9dc070a-e88a-451b-9c74-b9e12af65e25_300.jpg"></div>
+                                Live blog: CU Buffs football vs. UMass
+                            </a>
+                            <span class="DateTime">Sep 12, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes football team hosts the University of Massachusetts Minutemen at Folsom Field in Boulder, Colo., Saturday, Sept. 12, 2015 at noon.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_2_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/11/ff4a9ac5-6a08-43e1-884c-3a78da94d9ee_300.jpg"></div>
+                                Colorado High School Football Week 2 Live Blog
+                            </a>
+                            <span class="DateTime">Sep 11, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 2.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos_Roster_Cuts_Tracker">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/5/33e8e0ca-56b1-486d-9761-4be90be89d9d_300.jpg"></div>
+                                Denver Broncos Roster Cuts Tracker
+                            </a>
+                            <span class="DateTime">Sep 5, 2015</span>
+                            <span class="Description">John Elway and Gary Kubiak will address local media after trimming the Broncos' roster to 53 on Saturday.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_State_vs_Savannah_State_football_live_chat">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/5/e37ee82f-8142-4702-9e7b-5660bf01dc0e_300.jpg"></div>
+                                Colorado State vs. Savannah State live chat
+                            </a>
+                            <span class="DateTime">Sep 5, 2015</span>
+                            <span class="Description">Live blog updates and analysis from the Colorado State Rams vs. Savannah State Tigers football game.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_High_School_Football_Week_1_Live_Blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/4/f07f5b68-3ddc-4fe3-886d-547606956cb0_300.jpg"></div>
+                                Colorado High School Football Week 1 Live Blog
+                            </a>
+                            <span class="DateTime">Sep 5, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 1.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/CU_Buffs_at_Hawaii_Rainbow_Warriors">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/3/4f0cedb9-016d-4896-b217-382a72c09b92_300.jpg"></div>
+                                CU Buffs at Hawaii Rainbow Warriors
+                            </a>
+                            <span class="DateTime">Sep 4, 2015</span>
+                            <span class="Description">The University of Colorado Buffaloes take on the University of Hawaii Rainbow Warriors in their NCAA college football opener at Hawaiian Airlines Field at Aloha Stadium, Honolulu, Hawaii, Thursday, Sept. 3, 2015.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-Arizona_Cardinals_preseason_live_blog_Sept_3_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/13/dbdcd684-2e12-4744-883f-e454a59fc0b9_300.jpg"></div>
+                                Denver Broncos-Arizona Cardinals preseason live blog Sept. 3, 2015
+                            </a>
+                            <span class="DateTime">Sep 13, 2015</span>
+                            <span class="Description">The Denver Broncos and Arizona Cardinals face each other in the teams' third preseason game on Thursday, Sept. 3, 2015, at Sports Authority Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_Rockies_vs_Arizona_Diamondbacks_Sept_1_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/9/1/53b7fbae-d875-4fec-ba99-ef3e1156c506_300.jpg"></div>
+                                Colorado Rockies vs. Arizona Diamondbacks Sept. 1, 2015
+                            </a>
+                            <span class="DateTime">Sep 1, 2015</span>
+                            <span class="Description">Join The Denver Post live blog for the Colorado Rockies vs. the Arizona Diamondbacks.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Colorado_high_school_football_Week_0_live_blog">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/8/29/28316a0c-a48a-4922-a3e9-463a6b9afa79_300.jpg"></div>
+                                Colorado high school football Week 0 live blog
+                            </a>
+                            <span class="DateTime">Sep 3, 2015</span>
+                            <span class="Description">A live blog of high school football games in Colorado for Week 0.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+                        <dd>
+                           <a href="http://live.denverpost.com/Event/Denver_Broncos-San_Francisco_49ers_preseason_live_blog_Aug_29_2015">
+                                <div class="EventImage"><img src="http://images.scribblelive.com/2015/8/25/78cc9e68-d754-4adc-9627-1ffe44149adc_300.jpg"></div>
+                                Denver Broncos-San Francisco 49ers preseason live blog Aug. 29, 2015
+                            </a>
+                            <span class="DateTime">Aug 29, 2015 - 5:49 PM MDT</span>
+                            <span class="Description">The Denver Broncos and San Francisco 49ers face each other in the teams' third preseason game on Saturday, Aug. 29, 2014, at Sports Authority Field.</span>
+                            <div class="Clear"></div>
+                        </dd>
+                    
+            </dl>
+        </div>
+        <div id="AllEvents_AllArticles" class="TabPanel">
+            <h4 id="Column1Area_H1" class="Description">All Articles</h4>
+            <dl id="Column1Area_Dl1" class="ThreadsList">
+                
+            </dl>
+        </div>
+    </div>
+
+    <script type="text/javascript">            
+        SCRIBBLE.AllEvents.AllEvents.Init();
+    </script>
+<a href="http://www.scribblelive.com/embed-welcome/?utm_source=whitelabel&utm_medium=client_referral&utm_campaign=whitelabel" title="ScribbleLive Content Marketing Software Platform" class="PoweredByImg" target="_blank">Powered by ScribbleLive Content Marketing Software Platform</a></div></div>
+
+<div class="clear" style="height:0;width:100%;clear:both;"></div>
+
+</div>
+
+<div id="dfmFooter" style="border-top:1px solid #ddd;"><!--Footer Goes Here--></div>
+
+<script src="output/vendor-include.html"></script>
+<script>
+    var waitingforGodot = setTimeout(function(){dfmNav.initParams("mode|article", "site|denverpost", "pageTitle|Denver Post Live", "leaderboard|true", "thirdParty|true")},500);
+</script>
+
+<script src="http://extras.mnginteractive.com/live/js/ownLocal/ownLocal.js?domain=mylocal.denverpost.com&amp;city=Denver&amp;state=CO" id="ownLocalJS" type="text/javascript"></script>
+
+
+
+<!-- ScribbleLive Site Metrics -->
+<script type="text/javascript">
+    var IsGAInstalled = false;
+    try
+    {
+        if (gaJsHost != null)
+        {
+            IsGAInstalled = true;
+        }
+    }
+    catch (Error)
+    {
+    }
+
+    if (!IsGAInstalled)
+    {
+        gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        (function ()
+        {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = gaJsHost + 'google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    }
+</script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-289507-7']);
+    _gaq.push(['_trackPageview']);
+</script>
+
+<div id="SiteMetricsControl_StatCounterCodeBlock">
+    
+    <!-- Start of StatCounter Code -->
+    <script type="text/javascript">
+        var sc_project = 3505602;
+        var sc_invisible = 1;
+        var sc_partition = 33;
+        var sc_security = "dc7adfa0";
+        var issitemetrics = true;
+    </script>
+
+    <script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+    <!-- End of StatCounter Code -->
+
+</div>
+
+
+
+
+
+<!-- ScribbleLive Internal Metrics -->
+
+<div id="ScribbleMetriscControl_ScribbleLiveCounterBlock">
+    
+
+<script type="text/javascript">
+    
+
+if(typeof IsSLBackend == 'undefined' || IsSLBackend == null || IsSLBackend===false){
+    (function ()
+    {
+        var CounterImage = null;
+        var CookiesEnabled = true;
+        var StatsUserId = null;
+        var UniquesList = null;
+
+        function HitCounter(pIsPageView)
+        {
+            try
+            {
+                if (StatsUserId == null)
+                {
+                    StatsUserId = getCookie("SLStatUid");
+
+                    if (StatsUserId == null)
+                    {
+                        // Generate a unique ID for the user
+                        StatsUserId = (document.domain + "").hashCode() + "_" + (new Date()).getTime() + "_" + Math.floor((Math.random() * 10000000) + 1);
+                        setCookie("SLStatUid", StatsUserId);
+
+                        CookiesEnabled = (getCookie("SLStatUid") != null);
+                    }
+                }
+
+                var ItemKey = null;
+
+                if ( typeof SCRIBBLE !== "undefined" && typeof SCRIBBLE.globals !== 'undefined' && typeof SCRIBBLE.globals.thread !== "undefined" && typeof SCRIBBLE.globals.thread.id !== "undefined" )
+                {
+                    ItemKey = SCRIBBLE.globals.thread.id;
+                }
+                else if (typeof ThreadId != "undefined")
+                {
+                    ItemKey = ThreadId;
+                }
+                else if (typeof ScribbleLive_TopPostsWidget != "undefined")
+                {
+                    ItemKey = ScribbleLive_TopPostsWidget.ThreadId;
+                }
+                else if ( typeof LiveArticleEmbed != "undefined" && LiveArticleEmbed.GetInstance() != "undefined" && LiveArticleEmbed.GetInstance() != null )
+                {
+                    ItemKey = LiveArticleEmbed.GetInstance().ThreadId;
+                }
+
+                if ( typeof ItemKey !== "undefined" && ItemKey !== null )
+                {
+                    var SourceType = GetSourceType();
+                    if ( SourceType !== null )
+                    {
+                        ItemKey = ( ItemKey + "" ).replace(/\s/ig, "");
+                        var IsFirstView = pIsPageView;
+                        var Client = -1;
+
+                        if ( typeof SCRIBBLE !== "undefined" && typeof SCRIBBLE.globals !== 'undefined' && typeof SCRIBBLE.globals.website !== "undefined" && typeof SCRIBBLE.globals.website.client !== "undefined" && typeof SCRIBBLE.globals.website.client.id !== "undefined" )
+                        {
+                            Client = SCRIBBLE.globals.website.client.id;
+                        }else if(typeof ClientId !== "undefined")
+                        {
+                            Client = ClientId;
+                        }
+
+                        if (pIsPageView)
+                        {
+                            if (UniquesList == null)
+                            {
+                                UniquesList = getCookie("SLStatHist");
+                            }
+
+                            if (UniquesList == null) { UniquesList = ""; }
+
+                            // If we've already seen that item
+                            if (UniquesList.match(new RegExp("(^|\|)" + ItemKey)))
+                            {
+                                IsFirstView = false;
+                            }
+                            else
+                            {
+                                var MAXCOOKIELENGTH = 3500;
+                                var MAXVARLENGTH = 20000;
+
+                                IsFirstView = true;
+                                UniquesList += "|" + ItemKey;
+
+                                if (UniquesList.length > MAXVARLENGTH)
+                                {
+                                    UniquesList = UniquesList.substring(UniquesList.length - MAXVARLENGTH);
+                                    UniquesList = UniquesList.substring(UniquesList.indexOf("|"));
+                                }
+
+                                var CookieUniquesList = UniquesList;
+
+                                if (CookieUniquesList.length > MAXCOOKIELENGTH)
+                                {
+                                    CookieUniquesList = CookieUniquesList.substring(CookieUniquesList.length - MAXCOOKIELENGTH);
+                                    CookieUniquesList = CookieUniquesList.substring(CookieUniquesList.indexOf("|"));
+                                }
+
+                                setCookie("SLStatHist", CookieUniquesList);
+                            }
+
+                            //document.title = UniquesList;
+                        }
+
+                        CounterImage = new Image();
+                        CounterImage.src = "//counter.scribblelive.com/?page=" + ItemKey
+                                + (pIsPageView ? "&pageview=1" : "")
+                                + (IsFirstView ? "&first=1" : "")
+                        //+ (CookiesEnabled ? "" : "&nocookies=1")
+                                + (StatsUserId ? "&uid=" + StatsUserId : "")
+                                + "&rand=" + Math.round(100000000 * Math.random())
+                                + "&Source=" + encodeURIComponent( GetSourceUrl( SourceType ) )
+                                + "&SourceType=" + SourceType
+                                + (Client != -1 ? "&Client=" + Client : "");
+
+                    }
+
+                    setTimeout(function ()
+                    {
+                        HitCounter();
+                    }, getRandomInt(45000, 57000));
+                }
+            }
+            catch (err) { }
+        }
+
+        function GetSourceUrl( pSourceType )
+        {
+            var Source = "";
+
+            // Embed
+            if ( pSourceType == 3 )
+            {
+                Source = document.referrer !== "" ? document.referrer : document.location.href;
+            }
+            else
+            {
+                Source = document.location.href;
+            }
+
+            return Source;
+        }
+
+        function GetSourceType() {
+            // default source type is API unless we determine otherwise
+            var $SourceType = 1;
+
+            var Found = false;
+
+            var ExperienceIs = ( typeof SCRIBBLE !== "undefined" && SCRIBBLE.globals && SCRIBBLE.globals.experience && SCRIBBLE.globals.experience.is ? SCRIBBLE.globals.experience.is : undefined );
+
+            // Whitelabel
+            if (ExperienceIs && ExperienceIs.whitelabel) {
+                $SourceType = 2;
+                Found = true;
+            }
+                // Embed
+            else if (ExperienceIs && ExperienceIs.embed) {
+                $SourceType = 3;
+                Found = true;
+            }
+                // ScribbleLive.mobi Mobile Template
+            else if ((typeof IsMobileSite !== "undefined" && IsMobileSite === true) || (typeof SCRIBBLE !== "undefined" && typeof SCRIBBLE.globals !== "undefined" && SCRIBBLE.globals.mobile === true)) {
+                $SourceType = 5;
+                Found = true;
+            }
+            // LiveArticle Embed
+            else if  ( typeof LiveArticleEmbed != "undefined" && LiveArticleEmbed.GetInstance() != "undefined" && LiveArticleEmbed.GetInstance() != null ) {
+                $SourceType = 6;
+                Found = true;
+            }
+            // LiveArticle Embed
+            else if (ExperienceIs && ExperienceIs.livearticleEmbed) {
+                $SourceType = 6;
+                Found = true;
+            }
+                // Recent Posts Embed
+            else if (typeof RecentPosts !== "undefined") {
+                $SourceType = 7;
+                Found = true;
+            }
+                // Single Post Page
+            else if (ExperienceIs && ExperienceIs.singlePostPage) {
+                $SourceType = 8;
+                Found = true;
+            }
+                // Scoreboard
+            else if (typeof ScribbleLive_Scoreboard != "undefined") {
+                $SourceType = 10;
+                Found = true;
+            }
+            // Pinboard
+            else if (ExperienceIs && ExperienceIs.pinboard) {
+                $SourceType = 11;
+                Found = true;
+            }
+            else if (ExperienceIs && ExperienceIs.timeline) {
+                $SourceType = 12;
+                Found = true;
+            }
+            else if (ExperienceIs && ExperienceIs.contentAtom) {
+                $SourceType = 13;
+                Found = true;
+            }
+
+            if (!Found && !ExperienceIs) {
+                $SourceType = null;
+            }
+
+            return $SourceType;
+        }
+
+        function getRandomInt(min, max)
+        {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getCookie(name)
+        {
+            var start = document.cookie.indexOf(name + "=");
+            var len = start + name.length + 1;
+            if ((!start) && (name != document.cookie.substring(0, name.length)))
+            {
+                return null;
+            }
+            if (start == -1) return null;
+            var end = document.cookie.indexOf(';', len);
+            if (end == -1) end = document.cookie.length;
+            return unescape(document.cookie.substring(len, end));
+        }
+
+        function setCookie(name, value, expires, path, domain, secure)
+        {
+            var today = new Date();
+            today.setTime(today.getTime());
+            if (expires)
+            {
+                expires = expires * 1000 * 60 * 60 * 24;
+            }
+            var expires_date = new Date(today.getTime() + (expires));
+            document.cookie = name + '=' + escape(value) +
+                    ((expires) ? ';expires=' + expires_date.toGMTString() : '') + //expires.toGMTString()
+                    ((path) ? ';path=' + path : '') +
+                    ((domain) ? ';domain=' + domain : '') +
+                    ((secure) ? ';secure' : '');
+        }
+
+        String.prototype.hashCode = function ()
+        {
+            var hash = 0;
+            var char2;
+            if (this.length == 0) return hash;
+            for (i = 0; i < this.length; i++)
+            {
+                char2 = this.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char2;
+                hash = hash & hash; // Convert to 32bit integer
+            }
+            return hash;
+        }
+
+        HitCounter(true);
+    })();
+
+}
+
+
+</script>
+
+
+</div>
+</body>
+</html>
