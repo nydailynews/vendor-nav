@@ -61,9 +61,10 @@ var dfmNav = {
         //jQuery('body').addClass('body-copy');
     },
     init_ads: function() {
-        var ranNum = Math.floor(Math.random()*101);
-        var ranRPN = ranNum.toString();
-        var dfpBuiltMappings = {}, dfpAdUnits = {};
+        window.ranNum = Math.floor(Math.random()*101);
+        window.ranRPN = ranNum.toString();
+        window.dfpBuiltMappings = {};
+        window.dfpAdUnits = {};
         googletag.cmd.push(function() {
             dfpBuiltMappings["top_leaderboard"] = googletag.sizeMapping().addSize([1000,200],[[728,90],[970,90],[970,250],[970,30]]).addSize([750,200],[[728,90]]).addSize([300,400],[[300,50],[320,50],[320,100]]).build();
             dfpBuiltMappings["Cube1_RRail_ATF"] = googletag.sizeMapping().addSize([1000,200],[[300,250],[300,600],[300,1050]]).addSize([750,200],[[300,250]]).addSize([300,400],[[300,250]]).build();
