@@ -35,7 +35,7 @@ if [ $FILESIZE -lt 1000 ]; then
     exit 2
 fi
 
-python parse.py 
+python2.7 parse.py 
 ./ftp.bash --dir $REMOTE_DIR --host $REMOTE_HOST
 
 exit 1
