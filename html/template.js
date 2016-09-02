@@ -61,9 +61,10 @@ var dfmNav = {
         //jQuery('body').addClass('body-copy');
     },
     init_ads: function() {
-        var ranNum = Math.floor(Math.random()*101);
-        var ranRPN = ranNum.toString();
-        var dfpBuiltMappings = {}, dfpAdUnits = {};
+        window.ranNum = Math.floor(Math.random()*101);
+        window.ranRPN = ranNum.toString();
+        window.dfpBuiltMappings = {};
+        window.dfpAdUnits = {};
         googletag.cmd.push(function() {
             dfpBuiltMappings["top_leaderboard"] = googletag.sizeMapping().addSize([1000,200],[[728,90],[970,90],[970,250],[970,30]]).addSize([750,200],[[728,90]]).addSize([300,400],[[300,50],[320,50],[320,100]]).build();
             dfpBuiltMappings["Cube1_RRail_ATF"] = googletag.sizeMapping().addSize([1000,200],[[300,250],[300,600],[300,1050]]).addSize([750,200],[[300,250]]).addSize([300,400],[[300,250]]).build();
@@ -95,7 +96,11 @@ var dfmNav = {
             var to = window.setTimeout( function () {
                 dfmNav.css_checks(); dfmNav.add_header(); dfmNav.add_footer();
                 dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
-                var wait = window.setTimeout( function() { dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
+                var wait = window.setTimeout( function() { 
+                    dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); 
+                    //dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
+                    //dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
+                    }, 3000);
                 }, 5000);
         }
         else
@@ -106,6 +111,8 @@ var dfmNav = {
             this.add_footer();
             this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
             var wait = window.setTimeout( function() { dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
+            //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
+            //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
             var to = window.setTimeout( function() { $('#dfmHeader').css('visibility', 'visible'); }, 5000);
         }
 
