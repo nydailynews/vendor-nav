@@ -49,7 +49,7 @@ var dfmNav = {
     css_checks: function() {
         // Make sure the page is as ready as possible for the new styles.
         var search_string = 'prod/static/css/denverpost';
-        var css_href = 'https://assets.digitalfirstmedia.com/prod/static/css/denverpost.css?ver=1.0';
+        var css_href = '//extras.denverpost.com/vendor_templates/mason/denverpost.css';
         this.add_css_if_necessary(search_string, css_href);
         search_string = 'Source+Sans';
         css_href = 'https://fonts.googleapis.com/css?family=Source+Serif+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic%7CSource+Sans+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C400italic&#038;ver=4.5.3';
