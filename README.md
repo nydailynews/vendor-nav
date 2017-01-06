@@ -25,7 +25,8 @@ Example implementation:
 
 This is more or less the cron job that fires every thirty minutes:
 
-```*/30 * * * * cd path/to/vendor-nav; source .env-vars.bash; date > log; ./scrape.bash > log
+```bash
+*/30 * * * * cd path/to/vendor-nav; source .env-vars.bash; date > log; ./scrape.bash > log
 ```
 
 scrape.bash calls parse.py, which downloads a Denver Post page and pulls out the necessary elements, then ftp's the pieces and the javascript that makes the pieces work to extras.
