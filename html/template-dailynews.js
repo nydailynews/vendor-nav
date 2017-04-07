@@ -1,5 +1,5 @@
 // This javascript handles writing the site header / footer to a vendor page.
-var dfmNav = {
+var sitenav = {
     header: '{{header}}',
     footer: '{{footer}}',
     add_css_if_necessary: function(search_string, href) {
@@ -30,9 +30,6 @@ var dfmNav = {
     },
     add_header: function() {
         // Put the header on the page.
-
-        //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
-        //this.add_js('http://www.denverpost.com/wp-content/themes/wp-mason/static/js/global.min.js');
 
         if (  jQuery('#dfmHeader').length )
         {
@@ -94,12 +91,12 @@ var dfmNav = {
         {
             this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
             var to = window.setTimeout( function () {
-                dfmNav.css_checks(); dfmNav.add_header(); dfmNav.add_footer();
-                dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
+                sitenav.css_checks(); sitenav.add_header(); sitenav.add_footer();
+                sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
                 var wait = window.setTimeout( function() { 
-                    dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); 
-                    //dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
-                    //dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
+                    sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); 
+                    //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
+                    //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
                     }, 3000);
                 }, 5000);
         }
@@ -110,7 +107,7 @@ var dfmNav = {
             this.add_header();
             this.add_footer();
             this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
-            var wait = window.setTimeout( function() { dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
+            var wait = window.setTimeout( function() { sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
             //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
             //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
             var to = window.setTimeout( function() { $('#dfmHeader').css('visibility', 'visible'); }, 5000);
@@ -127,20 +124,20 @@ var dfmNav = {
         if ( has_gpt == 0 )
         {
             this.add_js('//www.googletagservices.com/tag/js/gpt.js');
-            var wait = window.setTimeout( function() { dfmNav.init_ads(); }, 2000);
+            var wait = window.setTimeout( function() { sitenav.init_ads(); }, 2000);
         }
         else this.init_ads();
 
         // Check for a common ad div, if it's not there then put some ads up
         
-        //var to = window.setTimeout("dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0');", 4000);
+        //var to = window.setTimeout("sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0');", 4000);
     }  
 };
 
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    dfmNav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-    var wait = window.setTimeout(function() { dfmNav.initParams(); }, 2000);
+    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+    var wait = window.setTimeout(function() { sitenav.initParams(); }, 2000);
 }
-else dfmNav.initParams();
+else sitenav.initParams();
