@@ -17,6 +17,9 @@ while [ "$1" != "" ]; do
         -u | --url ) shift
             URL=$1
             ;;
+        -s | --slug ) shift
+            SLUG=$1
+            ;;
         -t | --test ) shift
             TEST=1
             ;;

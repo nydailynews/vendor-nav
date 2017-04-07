@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # Download current versions of nydailynews.com's header and footer.
 import parse
+import sys
+import argparse
+import doctest
 
 def main(args):
     """ Example usage:
@@ -12,7 +15,13 @@ def main(args):
     markup = fh.read()
 
     # Results of this parsing is stored in p.content
+    regexes = {
+        #'header': '<nav\ id="rh-trending">.*</header>.*<div\ id="content"\ class="site-content">',
+        'header': '<header\ id="rh">.*</div>\ </nav>\ \ \ \ \ </header>',
+        'footer': '<footer\ class="site-footer">.*</footer>'
+    }
     p = p.Parse()
+    p.regexes = regexes
     p.regex = 'header'
     p.extract_parts(markup)
     p.regex = 'footer'
@@ -52,11 +61,11 @@ def build_parser(args):
         >>> print args.verbose
         True
         """
-    p. = argparse.ArgumentParser(usage='$ python parse.py',
+    p = argparse.ArgumentParser(usage='$ python parse.py',
                                      description='Parse site header & footer.',
                                      epilog='Examply use: python parse.py')
-    p..add_argument("-v", "--verbose", dest="verbose", default=False, action="store_true")
-    args = p..parse_args(args)
+    p.add_argument("-v", "--verbose", dest="verbose", default=False, action="store_true")
+    args = p.parse_args(args)
     return args
 
 if __name__ == '__main__':
