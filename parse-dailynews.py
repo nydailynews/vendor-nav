@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Download current versions of nydailynews.com's header and footer.
-import parse
+from parse import Parse, FileWrapper
 import sys
 import argparse
 import doctest
@@ -11,16 +11,17 @@ def main(args):
         might run on the command line.
         $ python parse.py
         """
-    fh = open('nydailynews.new', 'rb')
+    fh = open('dailynews.new', 'rb')
     markup = fh.read()
 
     # Results of this parsing is stored in p.content
     regexes = {
         #'header': '<nav\ id="rh-trending">.*</header>.*<div\ id="content"\ class="site-content">',
-        'header': '<header\ id="rh">.*</div>\ </nav>\ \ \ \ \ </header>',
-        'footer': '<footer\ class="site-footer">.*</footer>'
+        #'header': '<header\ id="rh">.*</div>\ </nav>\ \ \ \ \ </header>',
+        'header': '<header\ id="rh">.*</header>',
+        'footer': '<footer\ id="rf">.*</footer>'
     }
-    p = p.Parse()
+    p = Parse()
     p.regexes = regexes
     p.regex = 'header'
     p.extract_parts(markup)
@@ -42,12 +43,12 @@ def main(args):
     # Write the file
     if p.content['header'] != '':
         f = FileWrapper('output/header.html')
-        f.write(parse.content['header'])
+        f.write(p.content['header'])
         f = FileWrapper('output/header-iframeable.html')
         f.write('%s%s' % (head_markup, p.content['header']))
     if p.content['footer'] != '':
         f = FileWrapper('output/footer.html')
-        f.write(parse.content['footer'])
+        f.write(p.content['footer'])
         f = FileWrapper('output/footer-iframeable.html')
         f.write('%s%s' % (head_markup, p.content['footer']))
     if p.content['footer'] != '' and p.content['header'] != '':
