@@ -16,9 +16,7 @@ def main(args):
 
     # Results of this parsing is stored in p.content
     regexes = {
-        #'header': '<nav\ id="rh-trending">.*</header>.*<div\ id="content"\ class="site-content">',
-        #'header': '<header\ id="rh">.*</div>\ </nav>\ \ \ \ \ </header>',
-        'header': '<header\ id="rh">.*</header>',
+        'header': '<header\ id="rh">.*</nav>\ *</header>',
         'footer': '<footer\ id="rf">.*</footer>'
     }
     p = Parse()
