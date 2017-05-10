@@ -30,7 +30,7 @@ def main(args):
     p.content['footer'] = p.content['footer'].replace('Powered by WordPress.com VIP', '').replace('Arbitration', '')
 
     # Turn the nav markup into actionable javascript
-    fh = open('html/template.js', 'rb')
+    fh = open('html/template-dailynews.js', 'rb')
     js = fh.read()
     js = js.replace('{{header}}', p.content['header'].replace("\n", "\\n").replace("'", "\\'"))
     js = js.replace('{{footer}}', p.content['footer'].replace("\n", "\\n").replace("'", "\\'"))

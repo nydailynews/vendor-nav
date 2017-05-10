@@ -31,31 +31,30 @@ var sitenav = {
     add_header: function() {
         // Put the header on the page.
 
-        if (  jQuery('#dfmHeader').length )
+        if (  jQuery('#templateheader').length )
         {
-            jQuery('#dfmHeader').html(this.header + '</div>');
+            jQuery('#templateheader').html(this.header + '</div>');
         }
     },
     add_footer: function() {
         // Put the footer on the page.
-        if (  jQuery('#dfmFooter').length )
+        if (  jQuery('#templatefooter').length )
         {
-            jQuery('#dfmFooter').html(this.footer);
+            jQuery('#templatefooter').html(this.footer);
         }
     },
     css_checks: function() {
         // Make sure the page is as ready as possible for the new styles.
         var search_string = 'prod/static/css/denverpost';
         var css_href = '//extras.denverpost.com/vendor_templates/mason/denverpost.css';
-        this.add_css_if_necessary(search_string, css_href);
+        //this.add_css_if_necessary(search_string, css_href);
         search_string = 'Source+Sans';
         css_href = 'https://fonts.googleapis.com/css?family=Source+Serif+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic%7CSource+Sans+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C400italic&#038;ver=4.5.3';
-        this.add_css_if_necessary(search_string, css_href);
+        //this.add_css_if_necessary(search_string, css_href);
 
 
         // Remove existing bartertown CSS
-        jQuery('link[rel=stylesheet][href="http://extras.mnginteractive.com/live/css/site67/bartertown.css"]').remove();
-        //jQuery('body').addClass('body-copy');
+        //jQuery('link[rel=stylesheet][href="http://extras.mnginteractive.com/live/css/site67/bartertown.css"]').remove();
     },
     init_ads: function() {
         window.ranNum = Math.floor(Math.random()*101);
@@ -83,7 +82,7 @@ var sitenav = {
             }
         });
     },
-    initParams: function(params) {
+    init: function(params) {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
 
@@ -92,25 +91,21 @@ var sitenav = {
             this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
             var to = window.setTimeout( function () {
                 sitenav.css_checks(); sitenav.add_header(); sitenav.add_footer();
-                sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
+                //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
                 var wait = window.setTimeout( function() { 
-                    sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); 
-                    //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
-                    //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
+                    //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); 
                     }, 3000);
                 }, 5000);
         }
         else
         {
             this.css_checks();
-            $('#dfmHeader').css('visibility', 'hidden');
+            //$('#templateheader').css('visibility', 'hidden');
             this.add_header();
             this.add_footer();
-            this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
-            var wait = window.setTimeout( function() { sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
-            //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
-            //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
-            var to = window.setTimeout( function() { $('#dfmHeader').css('visibility', 'visible'); }, 5000);
+            //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
+            //var wait = window.setTimeout( function() { sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
+            //var to = window.setTimeout( function() { $('#templateheader').css('visibility', 'visible'); }, 5000);
         }
 
         // Check for existing GPT script, which we need to show ads
@@ -138,6 +133,6 @@ var sitenav = {
 if ( typeof jQuery === 'undefined' )
 {
     sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-    var wait = window.setTimeout(function() { sitenav.initParams(); }, 2000);
+    var wait = window.setTimeout(function() { sitenav.init(); }, 2000);
 }
 else sitenav.initParams();
