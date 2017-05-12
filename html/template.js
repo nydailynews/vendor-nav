@@ -23,10 +23,11 @@ var dfmNav = {
         }
 
     },
-    add_js: function(src) {
+    add_js: function(src, callback) {
         var s = document.createElement('script');
         s.setAttribute('src', src);
         document.getElementsByTagName('head')[0].appendChild(s);
+        callback();
     },
     add_header: function() {
         // Put the header on the page.
@@ -92,12 +93,12 @@ var dfmNav = {
 
         if ( typeof jQuery === 'undefined' )
         {
-            this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+            this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function(){});
             var to = window.setTimeout( function () {
                 dfmNav.css_checks(); dfmNav.add_header(); dfmNav.add_footer();
-                dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
+                dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0', function(){});
                 var wait = window.setTimeout( function() { 
-                    dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); 
+                    dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0', function(){}); 
                     //dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
                     //dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
                     }, 3000);
@@ -109,8 +110,8 @@ var dfmNav = {
             $('#dfmHeader').css('visibility', 'hidden');
             this.add_header();
             this.add_footer();
-            this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
-            var wait = window.setTimeout( function() { dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
+            this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0', function(){});
+            var wait = window.setTimeout( function() { dfmNav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0', function(){}); }, 3000);
             //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/common.chunk.min.js');
             //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost-async.chunk.min.js');
             var to = window.setTimeout( function() { $('#dfmHeader').css('visibility', 'visible'); }, 5000);
@@ -126,7 +127,7 @@ var dfmNav = {
         }).length;
         if ( has_gpt == 0 )
         {
-            this.add_js('//www.googletagservices.com/tag/js/gpt.js');
+            this.add_js('//www.googletagservices.com/tag/js/gpt.js', function(){});
             var wait = window.setTimeout( function() { dfmNav.init_ads(); }, 2000);
         }
         else this.init_ads();
@@ -140,7 +141,6 @@ var dfmNav = {
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    dfmNav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-    var wait = window.setTimeout(function() { dfmNav.initParams(); }, 2000);
+    dfmNav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { dfmNav.initParams(); });
 }
 else dfmNav.initParams();

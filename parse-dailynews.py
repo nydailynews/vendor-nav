@@ -26,13 +26,10 @@ def main(args):
     p.regex = 'footer'
     p.extract_parts(markup)
 
-    # Remove these two elements from the footer
-    p.content['footer'] = p.content['footer'].replace('Powered by WordPress.com VIP', '').replace('Arbitration', '')
-
     # Turn the nav markup into actionable javascript
     fh = open('html/template-dailynews.js', 'rb')
     js = fh.read()
-    js = js.replace('{{header}}', p.content['header'].replace("\n", "\\n").replace("'", "\\'"))
+    js = js.replace('{{header}}', " ".join(p.content['header'].replace("\n", "\\n").replace("'", "\\'").splitlines()))
     js = js.replace('{{footer}}', p.content['footer'].replace("\n", "\\n").replace("'", "\\'"))
 
     fh = open('html/head.html', 'rb')
