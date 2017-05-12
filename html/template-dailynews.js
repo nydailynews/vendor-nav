@@ -23,10 +23,12 @@ var sitenav = {
         }
 
     },
-    add_js: function(src) {
+    add_js: function(src, callback) {
         var s = document.createElement('script');
+        s.onload = function() { callback(); }
         s.setAttribute('src', src);
         document.getElementsByTagName('head')[0].appendChild(s);
+        callback();
     },
     add_header: function() {
         // Put the header on the page.
@@ -86,9 +88,10 @@ var sitenav = {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
 
+        /*
         if ( typeof jQuery === 'undefined' )
         {
-            this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+            this.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() {});
             var to = window.setTimeout( function () {
                 sitenav.css_checks(); sitenav.add_header(); sitenav.add_footer();
                 //sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
@@ -99,6 +102,7 @@ var sitenav = {
         }
         else
         {
+        */
             this.css_checks();
             //$('#templateheader').css('visibility', 'hidden');
             this.add_header();
@@ -106,7 +110,7 @@ var sitenav = {
             //this.add_js('https://assets.digitalfirstmedia.com/prod/static/js/vendor.min.js?ver=1.0');
             //var wait = window.setTimeout( function() { sitenav.add_js('https://assets.digitalfirstmedia.com/prod/static/js/denverpost.min.js?ver=1.0'); }, 3000);
             //var to = window.setTimeout( function() { $('#templateheader').css('visibility', 'visible'); }, 5000);
-        }
+        //}
 
         // Check for existing GPT script, which we need to show ads
         var has_gpt = $('script').filter(function () {
@@ -118,8 +122,7 @@ var sitenav = {
         }).length;
         if ( has_gpt == 0 )
         {
-            this.add_js('//www.googletagservices.com/tag/js/gpt.js');
-            var wait = window.setTimeout( function() { sitenav.init_ads(); }, 2000);
+            this.add_js('//www.googletagservices.com/tag/js/gpt.js', function() { sitenav.init_ads()});
         }
         else this.init_ads();
 
@@ -132,7 +135,6 @@ var sitenav = {
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-    var wait = window.setTimeout(function() { sitenav.init(); }, 2000);
+    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { sitenav.init(); });
 }
 else sitenav.initParams();
