@@ -21,12 +21,18 @@ Example implementation:
 </html>
 ```
 
-# How it works
+## How it works
 
 This is more or less the cron job that fires every thirty minutes:
 
 ```bash
-*/30 * * * * cd path/to/vendor-nav; source .env-vars.bash; date > log; ./scrape.bash > log
+*/30 * * * * cd path/to/vendor-nav; source .env-vars.bash; date > log; ./scrape.bash >> log
 ```
 
 scrape.bash calls parse.py, which downloads a Denver Post page and pulls out the necessary elements, then ftp's the pieces and the javascript that makes the pieces work to extras.
+
+### How it works for non-Denver Post installs
+
+Same as above, except your cronjob will look something like `./scrape.bash --url http://www.nydailynews.com/ --slug dailynews >> log`
+
+Also, `scrape.bash` will execute a not-in-repo file named `deploy.bash`, which is where you can put all your environment-specific calls. 

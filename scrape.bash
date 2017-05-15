@@ -34,11 +34,18 @@ wget -O "$SLUG.new" "$URL"
 
 FILESIZE=$(du -b "$SLUG.new" | cut -f 1)
 if [ $FILESIZE -lt 1000 ]; then
-    echo "Filesize smaller than it sohuld be: $FILESIZE"
+    echo "Filesize smaller than it should be: $FILESIZE"
     exit 2
 fi
 
-python2.7 parse.py 
-./ftp.bash --dir $REMOTE_DIR --host $REMOTE_HOST
+if [[ $URL == *"denverpost.com"* ]]; then
+    # denverpost.com deploy
+    python2.7 parse.py 
+    ./ftp.bash --dir $REMOTE_DIR --host $REMOTE_HOST
+else
+    # non-denverpost.com deploy
+    # offload all other deploys to non-tracked script deploy.bash
+    ./deploy.bash
+fi
 
 exit 1
