@@ -59,5 +59,9 @@ Same as above, except your cronjob will look something like
 ```bash
 */30 * * * * cd path/to/vendor-nav; source .env-vars.bash; date > log; ./scrape.bash --url http://www.nydailynews.com/ --slug dailynews >> log
 ```
+Or, if you're using an article page
+```bash
+*/30 * * * * cd path/to/vendor-nav; source .env-vars.bash; date > log; ./scrape.bash --url http://www.nydailynews.com/opinion/bachelor-stars-ben-higgins-lauren-bushnell-split-article-1.3168031 --slug dailynews >> log
+```
 
 Also, `scrape.bash` will execute a not-in-repo file named `deploy.bash`, which is where you can put all your environment-specific calls. 
