@@ -33,14 +33,14 @@ var sitenav = {
     add_header: function() {
         // Put the header on the page.
 
-        if (  jQuery('#templateheader').length )
+        if ( jQuery('#templateheader').length )
         {
             jQuery('#templateheader').html(this.header + '</div>');
         }
     },
     add_footer: function() {
         // Put the footer on the page.
-        if (  jQuery('#templatefooter').length )
+        if ( jQuery('#templatefooter').length )
         {
             jQuery('#templatefooter').html(this.footer);
         }
@@ -54,28 +54,6 @@ var sitenav = {
     init_ads: function() {
         window.ranNum = Math.floor(Math.random()*101);
         window.ranRPN = ranNum.toString();
-        window.dfpBuiltMappings = {};
-        window.dfpAdUnits = {};
-        googletag.cmd.push(function() {
-            dfpBuiltMappings["top_leaderboard"] = googletag.sizeMapping().addSize([1000,200],[[728,90],[970,90],[970,250],[970,30]]).addSize([750,200],[[728,90]]).addSize([300,400],[[300,50],[320,50],[320,100]]).build();
-            dfpBuiltMappings["Cube1_RRail_ATF"] = googletag.sizeMapping().addSize([1000,200],[[300,250],[300,600],[300,1050]]).addSize([750,200],[[300,250]]).addSize([300,400],[[300,250]]).build();
-            dfpBuiltMappings["Cube2_RRail_mid"] = googletag.sizeMapping().addSize([1000,200],[[300,250]]).addSize([750,200],[[300,250]]).addSize([300,400],[[300,250]]).build();
-            dfpBuiltMappings["Cube3_RRail_lower"] = googletag.sizeMapping().addSize([1000,200],[[300,250]]).addSize([750,200],[[300,250]]).addSize([300,400],[[300,250]]).build();
-            dfpBuiltMappings["bottom_leaderboard"] = googletag.sizeMapping().addSize([1000,200],[[728,90],[970,250],[970,90]]).addSize([750,200],[[728,90]]).addSize([300,400],[[320,100],[320,50]]).build();
-            dfpBuiltMappings["interstitial"] = googletag.sizeMapping().addSize([1000,200],[[1,1]]).addSize([750,200],[[1,1]]).addSize([300,400],[[1,1]]).build();
-            dfpAdUnits["interstitial"] = googletag.defineSlot("\/8013\/denverpost.com\/politics\/election",[1,1],"div-gpt-ad-interstitial").defineSizeMapping(dfpBuiltMappings["interstitial"]).setTargeting("POS",["interstitial"]).setTargeting("kv","election").setTargeting("page",["section"]).setTargeting("RPN", ranRPN).addService(googletag.pubads());
-            dfpAdUnits["top_leaderboard"] = googletag.defineSlot("\/8013\/denverpost.com\/politics\/election",[728,90],"div-gpt-ad-top_leaderboard").defineSizeMapping(dfpBuiltMappings["top_leaderboard"]).setTargeting("POS",["top_leaderboard"]).setTargeting("kv","election").setTargeting("page",["section"]).setTargeting("RPN", ranRPN).addService(googletag.pubads());
-            dfpAdUnits["Cube1_RRail_ATF"] = googletag.defineSlot("\/8013\/denverpost.com\/politics\/election",[300,250],"div-gpt-ad-Cube1_RRail_ATF").defineSizeMapping(dfpBuiltMappings["Cube1_RRail_ATF"]).setTargeting("POS",["Cube1_RRail_ATF"]).setTargeting("kv","election").setTargeting("page",["section"]).setTargeting("RPN", ranRPN).addService(googletag.pubads());
-            dfpAdUnits["Cube2_RRail_mid"] = googletag.defineSlot("\/8013\/denverpost.com\/politics\/election",[300,250],"div-gpt-ad-Cube2_RRail_mid").defineSizeMapping(dfpBuiltMappings["Cube2_RRail_mid"]).setTargeting("POS",["Cube2_RRail_mid"]).setTargeting("kv","election").setTargeting("page",["section"]).setTargeting("RPN", ranRPN).addService(googletag.pubads());
-            dfpAdUnits["bottom_leaderboard"] = googletag.defineSlot("\/8013\/denverpost.com\/politics\/election",[728,90],"div-gpt-ad-bottom_leaderboard").defineSizeMapping(dfpBuiltMappings["bottom_leaderboard"]).setTargeting("POS",["bottom_leaderboard"]).setTargeting("kv","election").setTargeting("page",["section"]).setTargeting("RPN", ranRPN).addService(googletag.pubads());
-            googletag.pubads().enableAsyncRendering();
-            googletag.pubads().enableSingleRequest();
-            googletag.pubads().collapseEmptyDivs();
-
-            if ( typeof AdLayersAPI === 'undefined' || ! AdLayersAPI.isDebug() ) {
-                googletag.enableServices();
-            }
-        });
     },
     init: function(params) {
         // Make sure we have jquery on the page.
@@ -100,9 +78,10 @@ var sitenav = {
     }  
 };
 
+var params = {section: 'Opinion', path: 'http://www.nydailynews.com/opinion/'};
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { sitenav.init(); });
+    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { sitenav.init(params); });
 }
-else sitenav.initParams();
+else sitenav.init(params);

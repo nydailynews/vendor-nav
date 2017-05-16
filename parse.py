@@ -8,7 +8,6 @@ from collections import OrderedDict
 import types
 import os.path
 import string
-import httplib2
 
 class Parse:
 
@@ -37,21 +36,11 @@ class Parse:
 
 
 class FileWrapper:
-    """ class FileWrapper handles file write and download operations.
+    """ class FileWrapper handles file write operations.
         """
     def __init__(self, filename):
         self.filename = filename
         self.fn = None
- 
-    def request(self, url, action='GET', headers={}, request_body=''):
-        """ 
-            """
-        h = httplib2.Http('')
-        response, content = h.request(url, action, headers=headers, body=request_body)
-        if response.status > 299:
-            print 'ERROR: HTTP response %s' % response.status
-            sys.exit(1)
-        return content
  
     def open(self):
         self.fn = open(self.filename, 'w')
