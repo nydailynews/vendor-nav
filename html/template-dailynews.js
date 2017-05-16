@@ -28,11 +28,9 @@ var sitenav = {
         s.onload = function() { callback(); }
         s.setAttribute('src', src);
         document.getElementsByTagName('head')[0].appendChild(s);
-        callback();
     },
     add_header: function() {
         // Put the header on the page.
-
         if ( jQuery('#templateheader').length )
         {
             jQuery('#templateheader').html(this.header + '</div>');
@@ -58,6 +56,10 @@ var sitenav = {
     init: function(params) {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
+
+        if ( 'section' in params ) this.header = this.header.replace('<a id="rh-front" href="http://www.nydailynews.com/opinion">  <span>entertainment</span>',  '<a id="rh-front" href="http://www.nydailynews.com/opinion">  <span>' + params.section + '</span>');
+        if ( 'url' in params ) this.header = this.header.replace('<a id="rh-front" href="http://www.nydailynews.com/opinion">', '<a id="rh-front" href="' + params.url + '">');
+
         this.css_checks();
         this.add_header();
         this.add_footer();
@@ -78,10 +80,13 @@ var sitenav = {
     }  
 };
 
-var params = {section: 'Opinion', path: 'http://www.nydailynews.com/opinion/'};
+if ( typeof nav_params === 'undefined' ) var nav_params = {};
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { sitenav.init(params); });
+    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { sitenav.init(nav_params); });
 }
-else sitenav.init(params);
+else
+{
+    sitenav.init(nav_params);
+}
