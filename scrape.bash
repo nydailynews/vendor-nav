@@ -30,7 +30,7 @@ done
 # If we're not testing, we download the file
 if [ "$TEST" -eq 0 ]; then wget -q -O "$SLUG.new" $URL; fi
 
-wget -O "$SLUG.new" "$URL"
+wget --server-response -O "$SLUG.new" "$URL" 2>&1
 
 FILESIZE=$(du -b "$SLUG.new" | cut -f 1)
 if [ $FILESIZE -lt 1000 ]; then
