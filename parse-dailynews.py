@@ -4,6 +4,8 @@ from parse import Parse, FileWrapper
 import sys
 import argparse
 import doctest
+import mimetypes
+import gzip
 
 def main(args):
     """ Example usage:
@@ -11,8 +13,14 @@ def main(args):
         might run on the command line.
         $ python parse.py
         """
-    fh = open('dailynews.new', 'rb')
+    fn = 'dailynews.new'
+    fh = open(fn, 'rb')
     markup = fh.read()
+    if markup[:3] != '   ':
+        # We have a gunzip'ed file we have to extract.
+        # We know this because the first three characters of www.nydailynews.com urls are always '   '.
+        # Always. They are always '   '.
+        markup = gzip.GzipFile(fn, 'r').read()
 
     # Results of this parsing is stored in p.content
     regexes = {
@@ -29,6 +37,7 @@ def main(args):
     # Turn the nav markup into actionable javascript
     fh = open('html/template-dailynews.js', 'rb')
     js = fh.read()
+    #js = js.replace('{{header}}', " ".join(p.content['header'].replace("\n", "\\n").replace("'", "\\'").replace(";",";\\n\\\n").splitlines()))
     js = js.replace('{{header}}', " ".join(p.content['header'].replace("\n", "\\n").replace("'", "\\'").splitlines()))
     js = js.replace('{{footer}}', p.content['footer'].replace("\n", "\\n").replace("'", "\\'"))
 
