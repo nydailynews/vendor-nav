@@ -11,7 +11,7 @@ def main(args):
     """ Example usage:
         Describe what we do in this file, then give an example of a command you
         might run on the command line.
-        $ python parse.py
+        $ python parse-dailynews.py
         """
     fn = 'dailynews.new'
     fh = open(fn, 'rb')

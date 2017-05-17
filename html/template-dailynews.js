@@ -56,7 +56,6 @@ var sitenav = {
     init: function(params) {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
-
         if ( 'section' in params ) this.header = this.header.replace('<a id="rh-front" href="http://www.nydailynews.com/opinion">  <span>entertainment</span>',  '<a id="rh-front" href="http://www.nydailynews.com/opinion">  <span>' + params.section + '</span>');
         if ( 'url' in params ) this.header = this.header.replace('<a id="rh-front" href="http://www.nydailynews.com/opinion">', '<a id="rh-front" href="' + params.url + '">');
 
@@ -84,7 +83,7 @@ if ( typeof nav_params === 'undefined' ) var nav_params = {};
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    sitenav.add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() { sitenav.init(nav_params); });
+    sitenav.add_js('http://interactive.nydailynews.com/js/jquery.min.js', function() { sitenav.init(nav_params); });
 }
 else
 {
