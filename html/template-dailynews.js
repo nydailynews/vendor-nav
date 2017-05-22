@@ -62,10 +62,9 @@ var sitenav = {
     init: function(params) {
         // Make sure we have jquery on the page.
         // Then add the header to the page, then the footer.
+        this.css_checks();
         if ( 'section' in params ) this.header = this.header.replace('<a id="rh-front" href="http://www.nydailynews.com/opinion">  <span>entertainment</span>',  '<a id="rh-front" href="http://www.nydailynews.com/opinion">  <span>' + params.section + '</span>');
         if ( 'url' in params ) this.header = this.header.replace('<a id="rh-front" href="http://www.nydailynews.com/opinion">', '<a id="rh-front" href="' + params.url + '">');
-
-        this.css_checks();
         this.add_header();
         this.add_footer();
 
