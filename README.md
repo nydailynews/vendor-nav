@@ -23,6 +23,28 @@ Vendor nav javascript used on the majority of vendor sites exists at http://extr
 </html>
 ```
 
+### Daily News
+```html
+<html>
+<head>
+...
+    <script>var nav_params = {section: 'News Quizzes', url: 'http://interactive.nydailynews.com/quiz/'};</script>
+    <script src="http://interactive.nydailynews.com/library/vendor-nav/vendor-include.js" defer></script>
+</head>
+<body>
+<!-- SITEHEADER-START -->
+<header id="templateheader"></header>
+<!-- SITEHEADER-END -->
+
+...
+ 
+<!-- FOOTER-START -->
+<footer id="templatefooter"></footer>
+<!-- FOOTER-END --><script src="path/to/vendor-include.js"></script>
+</body>
+</html>
+```
+
 ### Non-Denver Post
 
 ```html
