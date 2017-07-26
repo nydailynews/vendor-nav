@@ -41,7 +41,7 @@ def main(args):
     #js = js.replace('{{header}}', " ".join(p.content['header'].replace("\n", "\\n").replace("'", "\\'").replace('/', '\/').splitlines()))
     # Life now:
     js = js.replace('{{header}}', " ".join(p.content['header'].replace('href="/', 'href="http://www.nydailynews.com/').replace("'", "\\'").replace('/', '\/').replace("\n", "\\n").replace('join("\\n")', 'join("\\\\n")').replace('/\\n+$', '/\\\\n+$').splitlines()))
-    js = js.replace('{{footer}}', p.content['footer'].replace('href="/', 'href="http://www.nydailynews.com/').replace("\n", "\\n").replace("'", "\\'"))
+    js = js.replace('{{footer}}', p.content['footer'].replace('href="/', 'href="http://www.nydailynews.com/').replace('article_750', 'article_250').replace("\n", "\\n").replace("'", "\\'"))
 
     fh = open('html/head.html', 'rb')
     head_markup = fh.read()
