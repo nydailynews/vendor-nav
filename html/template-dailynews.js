@@ -45,13 +45,13 @@ var sitenav = {
     css_checks: function() {
         // Make sure the page is as ready as possible for the new styles.
         var search_string = 'rh.css';
-        var css_href = 'http://assets.nydailynews.com/nydn/c/rh.css';
+        var css_href = '//assets.nydailynews.com/nydn/c/rh.css';
         this.add_css_if_necessary(search_string, css_href);
         var search_string = 'ra.css';
-        var css_href = 'http://assets.nydailynews.com/nydn/c/ra.css';
+        var css_href = '//assets.nydailynews.com/nydn/c/ra.css';
         this.add_css_if_necessary(search_string, css_href);
         //var search_string = 'http://interactive.nydailynews.com/css/style.css';
-        //var css_href = 'http://interactive.nydailynews.com/css/style.css';
+        //var css_href = '//interactive.nydailynews.com/css/style.css';
         //this.add_css_if_necessary(search_string, css_href);
         var search_string = 'Source+Sans';
         var css_href = 'https://fonts.googleapis.com/css?family=Source+Serif+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic%7CSource+Sans+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C400italic&#038;ver=4.5.3';
@@ -90,7 +90,7 @@ if ( typeof nav_params === 'undefined' ) var nav_params = {};
 // Staggered launch of object, depending on if we have jquery or not
 if ( typeof jQuery === 'undefined' )
 {
-    sitenav.add_js('http://interactive.nydailynews.com/js/jquery.min.js', function() { sitenav.init(nav_params); });
+    sitenav.add_js('//interactive.nydailynews.com/js/jquery.min.js', function() { sitenav.init(nav_params); });
 }
 else
 {
