@@ -17,7 +17,6 @@ var sitenav = {
         {
             var l = document.createElement('link');
             l.setAttribute('rel', 'stylesheet');
-            l.setAttribute('type', 'text/css');
             l.setAttribute('href', href);
             document.getElementsByTagName('head')[0].appendChild(l);
         }
@@ -51,6 +50,9 @@ var sitenav = {
         var search_string = 'ra.css';
         var css_href = 'http://assets.nydailynews.com/nydn/c/ra.css';
         this.add_css_if_necessary(search_string, css_href);
+        //var search_string = 'http://interactive.nydailynews.com/css/style.css';
+        //var css_href = 'http://interactive.nydailynews.com/css/style.css';
+        //this.add_css_if_necessary(search_string, css_href);
         var search_string = 'Source+Sans';
         var css_href = 'https://fonts.googleapis.com/css?family=Source+Serif+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic%7CSource+Sans+Pro%3A400%2C400italic%2C600%2C600italic%2C700%2C400italic&#038;ver=4.5.3';
         this.add_css_if_necessary(search_string, css_href);
