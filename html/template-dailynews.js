@@ -48,7 +48,7 @@ var sitenav = {
         var css_href = '//assets.nydailynews.com/nydn/c/rh.css';
         this.add_css_if_necessary(search_string, css_href);
         var search_string = 'ra.css';
-        var css_href = '//assets.nydailynews.com/nydn/c/ra.css';
+        var css_href = '//interactive.nydailynews.com/css/ra.css';
         this.add_css_if_necessary(search_string, css_href);
         //var search_string = 'http://interactive.nydailynews.com/css/style.css';
         //var css_href = '//interactive.nydailynews.com/css/style.css';
