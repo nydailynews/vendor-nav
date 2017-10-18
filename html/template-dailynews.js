@@ -45,7 +45,7 @@ var sitenav = {
     css_checks: function() {
         // Make sure the page is as ready as possible for the new styles.
         var search_string = 'rh.css';
-        var css_href = '//assets.nydailynews.com/nydn/c/rh.css';
+        var css_href = '//www.nydailynews.com/nydn/c/rh.css';
         this.add_css_if_necessary(search_string, css_href);
         var search_string = 'ra.css';
         var css_href = '//interactive.nydailynews.com/css/ra.css';
