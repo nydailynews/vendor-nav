@@ -1,3 +1,8 @@
+// Globals
+var is_mobile = /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var is_tablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(navigator.userAgent);
+var googletag = googletag || {};
+
 // This javascript handles writing the site header / footer to a vendor page.
 var sitenav = {
     header: '{{header}}',
