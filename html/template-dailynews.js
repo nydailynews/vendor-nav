@@ -35,16 +35,16 @@ var sitenav = {
     },
     add_header: function() {
         // Put the header on the page.
-        if ( jQuery('#templateheader').length )
+        if ( document.querySelectorAll('#templateheader').length )
         {
-            jQuery('#templateheader').html(this.header + '</div>');
+            document.getElementById('templateheader').innerHTML = this.header + '</div>';
         }
     },
     add_footer: function() {
         // Put the footer on the page.
-        if ( jQuery('#templatefooter').length )
+        if ( document.querySelectorAll('#templatefooter').length )
         {
-            jQuery('#templatefooter').html(this.footer);
+            document.getElementById('templatefooter').innerHTML = this.footer;
         }
     },
     css_checks: function() {
@@ -76,6 +76,7 @@ var sitenav = {
         this.add_footer();
 
         // Check for existing GPT script, which we need to show ads
+        // Array.prototype.filter.call(document.querySelectorAll(selector), filterFn);
         var has_gpt = $('script').filter(function () {
             if ( $(this).attr('src') )
             {
