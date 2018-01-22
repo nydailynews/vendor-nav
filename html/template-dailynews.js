@@ -49,6 +49,11 @@ var sitenav = {
         if ( document.querySelectorAll('#templatefooter').length )
         {
             document.getElementById('templatefooter').innerHTML = this.footer;
+            var div_el = document.createElement('div');
+            div_el.id = 'header-container';
+            div_el.setAttribute('data-reg-role', 'header-container');
+            var rh_el = document.getElementById('rh');
+            rh_el.appendChild(div_el);
         }
     },
     css_checks: function() {
