@@ -24,7 +24,7 @@ def main(args):
 
     # Results of this parsing is stored in p.content
     regexes = {
-        'header': '<header\ id="rh">.*</nav>\ *</header>',
+        'header': '<header\ id="rh">.*</nav>\ *<div\ id="header-container"\ data-reg-role="header-container"></div>\ </header>',
         'footer': '<footer\ id="rf">.*</footer>'
     }
     p = Parse()
