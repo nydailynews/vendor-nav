@@ -24,7 +24,7 @@ def main(args):
 
     # Results of this parsing is stored in p.content
     regexes = {
-        'header': '<header\ id="rh">.*</nav>\ *<div\ id="header-container"\ data-reg-role="header-container"></div>\ </header>',
+        'header': '<header\ id="rh">.*<div\ id="header-container"\ data-reg-role="header-container"></div>\ </header>',
         'footer': '<footer\ id="rf">.*</footer>'
     }
     p = Parse()
@@ -70,7 +70,7 @@ def build_parser(args):
         """
     p = argparse.ArgumentParser(usage='$ python parse.py',
                                      description='Parse site header & footer.',
-                                     epilog='Examply use: python parse.py')
+                                     epilog='Example use: python parse-dailynews.py')
     p.add_argument("-v", "--verbose", dest="verbose", default=False, action="store_true")
     args = p.parse_args(args)
     return args

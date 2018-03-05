@@ -28,7 +28,7 @@ class Parse:
         """ Take a string and parse the desired key/value pairs. Requires a regex
             of named fields. Returns a dict of the named pairs.
             """
-        regex = re.compile(self.regexes[self.regex], re.MULTILINE|re.VERBOSE|re.IGNORECASE|re.DOTALL)
+        regex = re.compile(self.regexes[self.regex], re.MULTILINE|re.VERBOSE|re.IGNORECASE|re.DOTALL|re.UNICODE)
         self.parts = regex.findall(markup)
         self.content[self.regex] = self.parts[0]
 
