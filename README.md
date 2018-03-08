@@ -1,7 +1,7 @@
 # Vendor Nav
-Tools for managing our vendor nav implementations.
+Tools for managing off-of-main-site header / footer implementations. This includes scripts for scraping the main site and parsing out the header and the footer with regular expressions. It also includes tools for taking the header and footer markup and adding that markup to a javascript file that can be included on other sites to replicate the main site's header and footer.
 
-Vendor nav javascript used on the majority of vendor sites exists at http://extra.denverpost.com/vendor_templates/mason/vendor-include.js and is updated every 30 minutes.
+Vendor nav javascript used on the majority of vendor sites exists at https://extras.denverpost.com/vendor_templates/mason/vendor-include.js and is updated every 30 minutes.
 
 ## Example implementation
 
